@@ -64,10 +64,12 @@ import benefitCard3 from "./benefits/card-3.svg";
 import benefitCard4 from "./benefits/card-4.svg";
 import benefitCard5 from "./benefits/card-5.svg";
 import benefitCard6 from "./benefits/card-6.svg";
-import benefitIcon1 from "./benefits/icon-1.svg";
-import benefitIcon2 from "./benefits/icon-2.svg";
-import benefitIcon3 from "./benefits/icon-3.svg";
-import benefitIcon4 from "./benefits/icon-4.svg";
+import serviceIcon1 from "./benefits/icon-1.svg";
+import serviceIcon2 from "./benefits/icon-2.svg";
+import serviceIcon3 from "./benefits/icon-3.svg";
+import serviceIcon4 from "./benefits/icon-4.svg";
+import serviceIcon5 from "./benefits/icon-5.svg";
+import serviceIcon6 from "./benefits/icon-6.svg";
 import benefitImage2 from "./benefits/image-2.png";
 
 import discordBlack from "./socials/discord.svg";
@@ -136,10 +138,12 @@ export {
   benefitCard4,
   benefitCard5,
   benefitCard6,
-  benefitIcon1,
-  benefitIcon2,
-  benefitIcon3,
-  benefitIcon4,
+  serviceIcon1,
+  serviceIcon2,
+  serviceIcon3,
+  serviceIcon4,
+  serviceIcon5,
+  serviceIcon6,
   benefitImage2,
   discordBlack,
   facebook,
