@@ -7,10 +7,10 @@ import ClipPath from "../assets/svg/ClipPath";
 
 const Services = () => {
   return (
-    <Section crosses id="features">
+    <Section crosses id="services">
       <div className="container relative z-2">
         <Heading
-          className="md:max-w-md lg:max-w-2xl"
+          className="md:max-w-md lg:max-w-2xl text-center"
           title="Appraisal Services"
         />
 
@@ -43,7 +43,7 @@ const Services = () => {
               {item.light && <GradientLight />}
 
               <div
-                className="absolute inset-0.5 bg-n-8"
+                className="absolute inset-0.5 bg-n-4"
                 style={{ clipPath: "url(#benefits)" }}
               >
                 <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
