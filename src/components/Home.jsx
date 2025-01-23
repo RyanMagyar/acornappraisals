@@ -1,4 +1,4 @@
-import Button from "./Button";
+import { Button } from "@mui/material";
 import Section from "./Section";
 import { homeBackground } from "../assets";
 
@@ -20,10 +20,10 @@ const Home = () => {
             Serving Southeast Michigan Since 1993
           </h2>
           <div className="mx-auto pt-20">
-            <Button className={"lg:mr-5"} white>
-              Appraisal Services
+            <Button variant="contained" sx={{ width: 132 }} className={"mr-5"}>
+              Contact Us
             </Button>
-            <Button className={"lg:ml-5"} white>
+            <Button variant="contained" className={"ml-5"}>
               Get a Quote
             </Button>
           </div>

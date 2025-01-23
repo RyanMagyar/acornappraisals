@@ -3,6 +3,7 @@ import ButtonGradient from "./assets/svg/ButtonGradient";
 import Home from "./components/Home";
 import Services from "./components/Services";
 import Map from "./components/Map";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Home />
         <Services />
         <Map></Map>
+        <Footer></Footer>
       </div>
 
       <ButtonGradient />
