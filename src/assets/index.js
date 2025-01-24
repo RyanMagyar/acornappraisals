@@ -27,6 +27,8 @@ import robot from "./hero/robot.jpg";
 import heroBackground from "./hero/hero-background.jpg";
 import homeBackground from "./home-background.jpg";
 import serviceMap from "./service-map.png";
+import plymouthPic from "./plymouth.jpg";
+import aboutBackground from "./about-bg.png";
 
 import curve1 from "./collaboration/curve-1.svg";
 import curve2 from "./collaboration/curve-2.svg";
@@ -72,7 +74,11 @@ import serviceIcon3 from "./benefits/icon-3.svg";
 import serviceIcon4 from "./benefits/icon-4.svg";
 import serviceIcon5 from "./benefits/icon-5.svg";
 import serviceIcon6 from "./benefits/icon-6.svg";
-import benefitImage2 from "./benefits/image-2.png";
+import benefitImage1 from "./benefits/house-bg.png";
+import benefitImage2 from "./benefits/death-bg.png";
+import benefitImage3 from "./benefits/trust-bg.png";
+import benefitImage4 from "./benefits/tax-bg.png";
+import benefitImage5 from "./benefits/divorce-bg.png";
 
 import discordBlack from "./socials/discord.svg";
 import facebook from "./socials/facebook.svg";
@@ -148,7 +154,13 @@ export {
   serviceIcon4,
   serviceIcon5,
   serviceIcon6,
+  benefitImage1,
   benefitImage2,
+  benefitImage3,
+  benefitImage4,
+  benefitImage5,
+  plymouthPic,
+  aboutBackground,
   discordBlack,
   facebook,
   instagram,

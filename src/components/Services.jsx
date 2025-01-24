@@ -33,7 +33,7 @@ const Services = () => {
                     height={48}
                     alt={item.title}
                   />
-                  <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
+                  <p className="ml-auto font-code text-xs font-bold text-n-2 uppercase tracking-wider">
                     Explore more
                   </p>
                   <Arrow />

@@ -20,7 +20,7 @@ const Map = () => {
             />
           </div>
           <div className="lg:grow lg:basis-1 ">
-            <h2 className="h2 mb-6 lg:mx-auto text-center">
+            <h2 className="h3 mb-6 lg:mx-auto text-center">
               Coutnies We Service
             </h2>
             <ul className="text-center flex flex-col lg:gap-y-5">

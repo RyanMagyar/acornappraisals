@@ -5,7 +5,11 @@ import {
   serviceIcon4,
   serviceIcon5,
   serviceIcon6,
+  benefitImage1,
   benefitImage2,
+  benefitImage3,
+  benefitImage4,
+  benefitImage5,
   chromecast,
   disc02,
   discord,
@@ -51,23 +55,18 @@ export const navigation = [
   },
   {
     id: "2",
-    title: "How to use",
-    url: "#how-to-use",
-  },
-  {
-    id: "3",
-    title: "Roadmap",
-    url: "#roadmap",
+    title: "About Us",
+    url: "#about",
   },
   {
     id: "4",
-    title: "New account",
+    title: "Contact Us",
     url: "#signup",
     onlyMobile: true,
   },
   {
     id: "5",
-    title: "Sign in",
+    title: "Get A Quote",
     url: "#login",
     onlyMobile: true,
   },
@@ -250,7 +249,7 @@ export const services = [
     text: "Get a competitive edge with a professional pre-listing appraisal. Our accurate, reliable valuations ensure your home is priced right from the start, helping you sell faster and for the best price.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: serviceIcon3,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage1,
   },
   {
     id: "1",
@@ -267,7 +266,7 @@ export const services = [
     text: "Ensure peace of mind with a accurate appraisal for real estate holdings. Our detailed valuations provide the clarity you need to make informed decisions for your estate and financial future.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: serviceIcon1,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage3,
   },
   {
     id: "3",
@@ -275,7 +274,7 @@ export const services = [
     text: "If you believe your property has been overvalued, a professional independent appraisal can help make your case to lower your property taxes.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: serviceIcon5,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage4,
     light: true,
   },
   {
@@ -284,7 +283,7 @@ export const services = [
     text: "Navigate the complexities of property division with a certified appraisal through Acorn Appraisal Services. Our impartial and accurate valuations provide the clarity needed for fair and equitable settlements",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: serviceIcon2,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage5,
   },
   {
     id: "5",
@@ -292,7 +291,7 @@ export const services = [
     text: "Find out about our other services such as bankruptcy appraisals, PMI removal appraisals, and more.",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
     iconUrl: serviceIcon6,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage5,
   },
 ];
 
