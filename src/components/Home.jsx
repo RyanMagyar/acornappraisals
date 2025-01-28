@@ -1,8 +1,14 @@
 import { Button } from "@mui/material";
 import Section from "./Section";
 import { homeBackground } from "../assets";
+import { useState } from "react";
+import ModalDialog from "./ModalDialog";
 
 const Home = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <Section
       className="pt-[12rem] -mt-[5.25rem]"
@@ -20,7 +26,7 @@ const Home = () => {
             Serving Southeast Michigan Since 1993
           </h2>
           <div className="mx-auto pt-20">
-            <Button variant="contained" className={"mr-5"}>
+            <Button variant="contained" className={"mr-5"} onClick={handleOpen}>
               Get a Quote
             </Button>
             <Button variant="contained" sx={{ width: 132 }} className={"ml-5"}>
@@ -28,6 +34,7 @@ const Home = () => {
             </Button>
           </div>
         </div>
+        <ModalDialog open={open} handleClose={handleClose} />
       </div>
     </Section>
   );

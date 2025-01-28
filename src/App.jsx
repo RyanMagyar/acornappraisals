@@ -8,10 +8,18 @@ import { ThemeProvider, createTheme } from "@mui/material";
 import About from "./components/About";
 
 const App = () => {
+  const rootElement = document.getElementById("root");
   const theme = createTheme({
     palette: {
       primary: {
         main: "#b25cb1",
+      },
+    },
+    components: {
+      MuiDialog: {
+        defaultProps: {
+          container: rootElement,
+        },
       },
     },
   });
