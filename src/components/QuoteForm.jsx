@@ -2,7 +2,7 @@ import { TextField, Button, MenuItem } from "@mui/material";
 import { MuiTelInput } from "mui-tel-input";
 import { useState } from "react";
 const QuoteForm = ({ handleClose }) => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState("+1");
   const handleChange = (newValue) => {
     setValue(newValue);
   };
@@ -11,6 +11,97 @@ const QuoteForm = ({ handleClose }) => {
     {
       value: "Michigan",
       label: "Michigan",
+    },
+  ];
+  const referrals = [
+    {
+      value: "Google",
+      label: "Google",
+    },
+    {
+      value: "Yelp",
+      label: "Yelp",
+    },
+    {
+      value: "Facebook",
+      label: "Facebook",
+    },
+    {
+      value: "Angi",
+      label: "Angi",
+    },
+    {
+      value: "Referral",
+      label: "Referral",
+    },
+  ];
+  const timeSpans = [
+    {
+      value: "Within a Week",
+      label: "Within a Week",
+    },
+    {
+      value: "1-2 Weeks",
+      label: "1-2 Weeks",
+    },
+    {
+      value: "2-3 Weeks",
+      label: "2-3 Weeks",
+    },
+    {
+      value: "3-4 Weeks",
+      label: "3-4 Weeks",
+    },
+    {
+      value: "4-6 Weeks",
+      label: "4-6 Weeks",
+    },
+    {
+      value: "6-8 Weeks",
+      label: "6-8 Weeks",
+    },
+    {
+      value: "2+ Months",
+      label: "2+ Months",
+    },
+  ];
+
+  const propertySize = [
+    {
+      value: "0-600 sq. ft.",
+      label: "0-600 sq. ft.",
+    },
+    {
+      value: "600-1,100 sq. ft.",
+      label: "600-1,100 sq. ft.",
+    },
+    {
+      value: "1,100-1,600 sq. ft.",
+      label: "1,100-1,600 sq. ft.",
+    },
+    {
+      value: "1,600-2,100 sq. ft.",
+      label: "1,600-2,100 sq. ft.",
+    },
+    {
+      value: "2,100-2,600 sq. ft.",
+      label: "2,100-2,600 sq. ft.",
+    },
+    {
+      value: "2,600-3,100 sq. ft.",
+      label: "2,600-3,100 sq. ft.",
+    },
+    {
+      value: "3,100-3,600 sq. ft.",
+      label: "3,100-3,600 sq. ft.",
+    },
+    {
+      value: "3,600-4,100 sq, ft.",
+      label: "3,600-4,100 sq, ft.",
+    },
+    {
+      value: "4,100+ sq. ft.",
+      label: "4,100+ sq. ft.",
     },
   ];
 
@@ -42,6 +133,10 @@ const QuoteForm = ({ handleClose }) => {
     {
       value: "Bankruptcy",
       label: "Bankruptcy",
+    },
+    {
+      value: "Other",
+      label: "Other",
     },
   ];
 
@@ -138,17 +233,65 @@ const QuoteForm = ({ handleClose }) => {
             ))}
           </TextField>
           <TextField
-            label="Email"
+            label="Property Size"
+            select
+            defaultValue="0-600 sq. ft."
             variant="outlined"
-            type="email"
             margin="normal"
             fullWidth
             required
-          />
+          >
+            {propertySize.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
         </div>
-        <Button onClick={handleClose} variant="contained">
-          Close
-        </Button>
+        <div className="lg:flex lg:gap-5">
+          <TextField
+            label="Appraisal Needed Time"
+            select
+            defaultValue="Appraisal Needed Time"
+            variant="outlined"
+            margin="normal"
+            fullWidth
+            required
+          >
+            {timeSpans.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+          <TextField
+            label="How Did You Find Us? "
+            select
+            defaultValue="Google"
+            variant="outlined"
+            margin="normal"
+            fullWidth
+          >
+            {referrals.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+        </div>
+        <div className="flex gap-5 justify-center">
+          <Button
+            onClick={handleClose}
+            size="large"
+            color="error"
+            variant="contained"
+          >
+            Cancel
+          </Button>
+          <Button onClick={handleClose} size="large" variant="contained">
+            Submit
+          </Button>
+        </div>
       </form>
     </div>
   );

@@ -24,7 +24,7 @@ const About = () => {
                 width={600}
                 height={300}
                 alt="Service Map"
-                className=""
+                className="mx-auto"
               />
             </div>
             <div className="lg:grow lg:basis-1 lg:ml-10 lg:max-w-300">
