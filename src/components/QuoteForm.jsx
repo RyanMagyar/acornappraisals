@@ -1,12 +1,23 @@
 import { TextField, Button, MenuItem } from "@mui/material";
 import { MuiTelInput } from "mui-tel-input";
 import { useState } from "react";
+import { useFormik } from "formik";
+import * as yup from "yup";
 const QuoteForm = ({ handleClose }) => {
   const [value, setValue] = useState("+1");
   const handleChange = (newValue) => {
     setValue(newValue);
   };
 
+  const formik = useFormik({
+    initialValues: {
+      Name: "a",
+      Email: "",
+    },
+    onSubmit: (values) => {
+      console.log(JSON.stringify(values));
+    },
+  });
   const states = [
     {
       value: "Michigan",
@@ -142,22 +153,28 @@ const QuoteForm = ({ handleClose }) => {
 
   return (
     <div className="">
-      <form className="flex flex-col p-10">
+      <form className="flex flex-col p-10" onSubmit={formik.handleSubmit}>
         <h1 className="h2 mb-5 text-n-1 mx-auto">Get a Quote</h1>
         <p className="pt-5">Personal Information</p>
         <div className="lg:flex lg:gap-5">
           <TextField
+            id="Name"
             label="Name"
             variant="outlined"
             margin="normal"
             fullWidth
             required
+            value={formik.values.Name}
+            onChange={formik.handleChange}
           />
           <TextField
+            id="Email"
             label="Email"
             variant="outlined"
             type="email"
             margin="normal"
+            value={formik.values.Email}
+            onChange={formik.handleChange}
             fullWidth
             required
           />
@@ -220,7 +237,7 @@ const QuoteForm = ({ handleClose }) => {
           <TextField
             label="Appraisal Type"
             select
-            defaultValue="Appraisal Type"
+            defaultValue=""
             variant="outlined"
             margin="normal"
             fullWidth
@@ -252,7 +269,7 @@ const QuoteForm = ({ handleClose }) => {
           <TextField
             label="Appraisal Needed Time"
             select
-            defaultValue="Appraisal Needed Time"
+            defaultValue=""
             variant="outlined"
             margin="normal"
             fullWidth
@@ -288,7 +305,12 @@ const QuoteForm = ({ handleClose }) => {
           >
             Cancel
           </Button>
-          <Button onClick={handleClose} size="large" variant="contained">
+          <Button
+            onClick={handleClose}
+            type="submit"
+            size="large"
+            variant="contained"
+          >
             Submit
           </Button>
         </div>
