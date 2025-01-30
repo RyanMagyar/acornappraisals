@@ -327,3 +327,135 @@ export const socials = [
     url: "#",
   },
 ];
+export const states = [
+  {
+    value: "Michigan",
+    label: "Michigan",
+  },
+];
+export const referrals = [
+  {
+    value: "Google",
+    label: "Google",
+  },
+  {
+    value: "Yelp",
+    label: "Yelp",
+  },
+  {
+    value: "Facebook",
+    label: "Facebook",
+  },
+  {
+    value: "Angi",
+    label: "Angi",
+  },
+  {
+    value: "Referral",
+    label: "Referral",
+  },
+];
+export const timeSpans = [
+  {
+    value: "Within a Week",
+    label: "Within a Week",
+  },
+  {
+    value: "1-2 Weeks",
+    label: "1-2 Weeks",
+  },
+  {
+    value: "2-3 Weeks",
+    label: "2-3 Weeks",
+  },
+  {
+    value: "3-4 Weeks",
+    label: "3-4 Weeks",
+  },
+  {
+    value: "4-6 Weeks",
+    label: "4-6 Weeks",
+  },
+  {
+    value: "6-8 Weeks",
+    label: "6-8 Weeks",
+  },
+  {
+    value: "2+ Months",
+    label: "2+ Months",
+  },
+];
+
+export const propertySize = [
+  {
+    value: "0-600 sq. ft.",
+    label: "0-600 sq. ft.",
+  },
+  {
+    value: "600-1,100 sq. ft.",
+    label: "600-1,100 sq. ft.",
+  },
+  {
+    value: "1,100-1,600 sq. ft.",
+    label: "1,100-1,600 sq. ft.",
+  },
+  {
+    value: "1,600-2,100 sq. ft.",
+    label: "1,600-2,100 sq. ft.",
+  },
+  {
+    value: "2,100-2,600 sq. ft.",
+    label: "2,100-2,600 sq. ft.",
+  },
+  {
+    value: "2,600-3,100 sq. ft.",
+    label: "2,600-3,100 sq. ft.",
+  },
+  {
+    value: "3,100-3,600 sq. ft.",
+    label: "3,100-3,600 sq. ft.",
+  },
+  {
+    value: "3,600-4,100 sq, ft.",
+    label: "3,600-4,100 sq, ft.",
+  },
+  {
+    value: "4,100+ sq. ft.",
+    label: "4,100+ sq. ft.",
+  },
+];
+
+export const appraisalTypes = [
+  {
+    value: "Prelisting",
+    label: "Prelisting",
+  },
+  {
+    value: "Estate Tax/Date of Death",
+    label: "Estate Tax/Date of Death",
+  },
+  {
+    value: "Real Estate Assessor",
+    label: "Real Estate Assessor",
+  },
+  {
+    value: "Divorce",
+    label: "Divorce",
+  },
+  {
+    value: "Financial Planning/Trusts",
+    label: "Financial Planning/Trusts",
+  },
+  {
+    value: "PMI",
+    label: "PMI",
+  },
+  {
+    value: "Bankruptcy",
+    label: "Bankruptcy",
+  },
+  {
+    value: "Other",
+    label: "Other",
+  },
+];

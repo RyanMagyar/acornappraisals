@@ -3,6 +3,11 @@ import { MuiTelInput } from "mui-tel-input";
 import { useState } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
+
+const validationSchema = yup.object({
+  Name: yup.string().required("Name is required"),
+});
+
 const QuoteForm = ({ handleClose }) => {
   const [value, setValue] = useState("+1");
   const handleChange = (newValue) => {
@@ -11,12 +16,14 @@ const QuoteForm = ({ handleClose }) => {
 
   const formik = useFormik({
     initialValues: {
-      Name: "a",
+      Name: "",
       Email: "",
     },
     onSubmit: (values) => {
       console.log(JSON.stringify(values));
+      handleClose();
     },
+    validationSchema: validationSchema,
   });
   const states = [
     {
@@ -163,9 +170,11 @@ const QuoteForm = ({ handleClose }) => {
             variant="outlined"
             margin="normal"
             fullWidth
-            required
             value={formik.values.Name}
             onChange={formik.handleChange}
+            error={formik.touched.Name && Boolean(formik.errors.Name)}
+            helperText={formik.touched.Name && formik.errors.Name}
+            onBlur={formik.handleBlur}
           />
           <TextField
             id="Email"
@@ -305,12 +314,7 @@ const QuoteForm = ({ handleClose }) => {
           >
             Cancel
           </Button>
-          <Button
-            onClick={handleClose}
-            type="submit"
-            size="large"
-            variant="contained"
-          >
+          <Button type="submit" size="large" variant="contained">
             Submit
           </Button>
         </div>
