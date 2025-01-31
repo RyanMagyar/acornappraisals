@@ -2,10 +2,21 @@ import { TextField, Button, MenuItem } from "@mui/material";
 import { MuiTelInput } from "mui-tel-input";
 import { useState } from "react";
 import { useFormik } from "formik";
+import {
+  states,
+  referrals,
+  timeSpans,
+  propertySize,
+  appraisalTypes,
+} from "../constants";
 import * as yup from "yup";
 
 const validationSchema = yup.object({
   Name: yup.string().required("Name is required"),
+  Email: yup.string().email().required("Email is required"),
+  Address: yup.string().required("Address is required"),
+  City: yup.string().required("City is required"),
+  ZipCode: yup.number().required("Zip Code is required"),
 });
 
 const QuoteForm = ({ handleClose }) => {
@@ -25,142 +36,14 @@ const QuoteForm = ({ handleClose }) => {
     },
     validationSchema: validationSchema,
   });
-  const states = [
-    {
-      value: "Michigan",
-      label: "Michigan",
-    },
-  ];
-  const referrals = [
-    {
-      value: "Google",
-      label: "Google",
-    },
-    {
-      value: "Yelp",
-      label: "Yelp",
-    },
-    {
-      value: "Facebook",
-      label: "Facebook",
-    },
-    {
-      value: "Angi",
-      label: "Angi",
-    },
-    {
-      value: "Referral",
-      label: "Referral",
-    },
-  ];
-  const timeSpans = [
-    {
-      value: "Within a Week",
-      label: "Within a Week",
-    },
-    {
-      value: "1-2 Weeks",
-      label: "1-2 Weeks",
-    },
-    {
-      value: "2-3 Weeks",
-      label: "2-3 Weeks",
-    },
-    {
-      value: "3-4 Weeks",
-      label: "3-4 Weeks",
-    },
-    {
-      value: "4-6 Weeks",
-      label: "4-6 Weeks",
-    },
-    {
-      value: "6-8 Weeks",
-      label: "6-8 Weeks",
-    },
-    {
-      value: "2+ Months",
-      label: "2+ Months",
-    },
-  ];
-
-  const propertySize = [
-    {
-      value: "0-600 sq. ft.",
-      label: "0-600 sq. ft.",
-    },
-    {
-      value: "600-1,100 sq. ft.",
-      label: "600-1,100 sq. ft.",
-    },
-    {
-      value: "1,100-1,600 sq. ft.",
-      label: "1,100-1,600 sq. ft.",
-    },
-    {
-      value: "1,600-2,100 sq. ft.",
-      label: "1,600-2,100 sq. ft.",
-    },
-    {
-      value: "2,100-2,600 sq. ft.",
-      label: "2,100-2,600 sq. ft.",
-    },
-    {
-      value: "2,600-3,100 sq. ft.",
-      label: "2,600-3,100 sq. ft.",
-    },
-    {
-      value: "3,100-3,600 sq. ft.",
-      label: "3,100-3,600 sq. ft.",
-    },
-    {
-      value: "3,600-4,100 sq, ft.",
-      label: "3,600-4,100 sq, ft.",
-    },
-    {
-      value: "4,100+ sq. ft.",
-      label: "4,100+ sq. ft.",
-    },
-  ];
-
-  const appraisalTypes = [
-    {
-      value: "Prelisting",
-      label: "Prelisting",
-    },
-    {
-      value: "Estate Tax/Date of Death",
-      label: "Estate Tax/Date of Death",
-    },
-    {
-      value: "Real Estate Assessor",
-      label: "Real Estate Assessor",
-    },
-    {
-      value: "Divorce",
-      label: "Divorce",
-    },
-    {
-      value: "Financial Planning/Trusts",
-      label: "Financial Planning/Trusts",
-    },
-    {
-      value: "PMI",
-      label: "PMI",
-    },
-    {
-      value: "Bankruptcy",
-      label: "Bankruptcy",
-    },
-    {
-      value: "Other",
-      label: "Other",
-    },
-  ];
 
   return (
     <div className="">
-      <form className="flex flex-col p-10" onSubmit={formik.handleSubmit}>
+      <form
+        noValidate
+        className="flex flex-col p-10"
+        onSubmit={formik.handleSubmit}
+      >
         <h1 className="h2 mb-5 text-n-1 mx-auto">Get a Quote</h1>
         <p className="pt-5">Personal Information</p>
         <div className="lg:flex lg:gap-5">
@@ -184,6 +67,9 @@ const QuoteForm = ({ handleClose }) => {
             margin="normal"
             value={formik.values.Email}
             onChange={formik.handleChange}
+            error={formik.touched.Email && Boolean(formik.errors.Email)}
+            helperText={formik.touched.Email && formik.errors.Email}
+            onBlur={formik.handleBlur}
             fullWidth
             required
           />
@@ -203,13 +89,18 @@ const QuoteForm = ({ handleClose }) => {
         <p className="pt-5">Property to be Appraised Address</p>
         <div className="lg:flex lg:gap-5">
           <TextField
+            id="City"
             label="Street Address"
             variant="outlined"
             margin="normal"
             fullWidth
+            error={formik.touched.Address && Boolean(formik.errors.Address)}
+            helperText={formik.touched.Address && formik.errors.Address}
+            onBlur={formik.handleBlur}
             required
           />
           <TextField
+            id="City"
             label="City"
             variant="outlined"
             margin="normal"
@@ -234,9 +125,13 @@ const QuoteForm = ({ handleClose }) => {
             ))}
           </TextField>
           <TextField
+            id="ZipCode"
             label="Zip Code"
             variant="outlined"
             margin="normal"
+            error={formik.touched.ZipCode && Boolean(formik.errors.ZipCode)}
+            helperText={formik.touched.ZipCode && formik.errors.ZipCode}
+            onBlur={formik.handleBlur}
             fullWidth
             required
           />
