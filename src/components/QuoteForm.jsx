@@ -1,6 +1,5 @@
 import { TextField, Button, MenuItem } from "@mui/material";
 import { MuiTelInput } from "mui-tel-input";
-import { useState } from "react";
 import { useFormik } from "formik";
 import {
   states,
@@ -11,24 +10,46 @@ import {
 } from "../constants";
 import * as yup from "yup";
 
+const phoneRegExp =
+  /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
+
 const validationSchema = yup.object({
   Name: yup.string().required("Name is required"),
   Email: yup.string().email().required("Email is required"),
-  Address: yup.string().required("Address is required"),
+  Phone: yup
+    .string()
+    .matches(phoneRegExp, "Phone number is not valid add +1 for US numbers")
+    .required("Phone number is required")
+    .min(15, "Phone number is not valid add +1 for US numbers")
+    .max(15, "Phone number is not valid add +1 for US numbers")
+    .trim(),
+  Address: yup.string().required("Street Address is required"),
   City: yup.string().required("City is required"),
-  ZipCode: yup.number().required("Zip Code is required"),
+  ZipCode: yup
+    .string()
+    .required("Zip Code is required")
+    .min(5, "Must be exactly 5 digits")
+    .max(5, "Must be exactly 5 Digits")
+    .matches(/^[0-9]+$/, "Must be only digits"),
+  Type: yup.string().required("Appraisal Type is required"),
+  Size: yup.string().required("Property Size is required"),
+  Time: yup.string().required("Appraisal Time Needed is required"),
+  FindUs: yup.string().required("How did you find us is required"),
 });
 
 const QuoteForm = ({ handleClose }) => {
-  const [value, setValue] = useState("+1");
-  const handleChange = (newValue) => {
-    setValue(newValue);
-  };
-
   const formik = useFormik({
     initialValues: {
       Name: "",
       Email: "",
+      Phone: "+1",
+      Address: "",
+      City: "",
+      ZipCode: "",
+      Type: "",
+      Size: "",
+      Time: "",
+      FindUs: "",
     },
     onSubmit: (values) => {
       console.log(JSON.stringify(values));
@@ -76,10 +97,14 @@ const QuoteForm = ({ handleClose }) => {
         </div>
         <div className="lg:flex flex-grow lg:gap-5">
           <MuiTelInput
+            id="Phone"
             label="Phone Number"
             variant="outlined"
-            value={value}
-            onChange={handleChange}
+            value={formik.values.Phone}
+            onChange={formik.handleChange("Phone")}
+            error={formik.touched.Phone && Boolean(formik.errors.Phone)}
+            helperText={formik.touched.Phone && formik.errors.Phone}
+            onBlur={formik.handleBlur("Phone")}
             className="lg:w-1/2 flex-grow width-full mt-5"
             fullWidth
             required
@@ -89,10 +114,12 @@ const QuoteForm = ({ handleClose }) => {
         <p className="pt-5">Property to be Appraised Address</p>
         <div className="lg:flex lg:gap-5">
           <TextField
-            id="City"
+            id="Address"
             label="Street Address"
             variant="outlined"
             margin="normal"
+            value={formik.values.Address}
+            onChange={formik.handleChange}
             fullWidth
             error={formik.touched.Address && Boolean(formik.errors.Address)}
             helperText={formik.touched.Address && formik.errors.Address}
@@ -104,6 +131,11 @@ const QuoteForm = ({ handleClose }) => {
             label="City"
             variant="outlined"
             margin="normal"
+            value={formik.values.City}
+            error={formik.touched.City && Boolean(formik.errors.City)}
+            helperText={formik.touched.City && formik.errors.City}
+            onBlur={formik.handleBlur}
+            onChange={formik.handleChange}
             fullWidth
             required
           />
@@ -129,6 +161,8 @@ const QuoteForm = ({ handleClose }) => {
             label="Zip Code"
             variant="outlined"
             margin="normal"
+            value={formik.values.ZipCode}
+            onChange={formik.handleChange("ZipCode")}
             error={formik.touched.ZipCode && Boolean(formik.errors.ZipCode)}
             helperText={formik.touched.ZipCode && formik.errors.ZipCode}
             onBlur={formik.handleBlur}
@@ -139,11 +173,17 @@ const QuoteForm = ({ handleClose }) => {
         <p className="pt-5">Additional Information</p>
         <div className="lg:flex lg:gap-5">
           <TextField
+            id="Type"
             label="Appraisal Type"
             select
             defaultValue=""
             variant="outlined"
             margin="normal"
+            value={formik.values.Type}
+            onChange={formik.handleChange("Type")}
+            error={formik.touched.Type && Boolean(formik.errors.Type)}
+            helperText={formik.touched.Type && formik.errors.Type}
+            onBlur={formik.handleBlur("Type")}
             fullWidth
             required
           >
@@ -154,11 +194,17 @@ const QuoteForm = ({ handleClose }) => {
             ))}
           </TextField>
           <TextField
+            id="Size"
             label="Property Size"
             select
-            defaultValue="0-600 sq. ft."
+            defaultValue=""
             variant="outlined"
             margin="normal"
+            value={formik.values.Size}
+            onChange={formik.handleChange("Size")}
+            error={formik.touched.Size && Boolean(formik.errors.Size)}
+            helperText={formik.touched.Size && formik.errors.Size}
+            onBlur={formik.handleBlur("Size")}
             fullWidth
             required
           >
@@ -171,11 +217,17 @@ const QuoteForm = ({ handleClose }) => {
         </div>
         <div className="lg:flex lg:gap-5">
           <TextField
+            id="Time"
             label="Appraisal Needed Time"
             select
             defaultValue=""
             variant="outlined"
             margin="normal"
+            value={formik.values.Time}
+            onChange={formik.handleChange("Time")}
+            error={formik.touched.Time && Boolean(formik.errors.Time)}
+            helperText={formik.touched.Time && formik.errors.Time}
+            onBlur={formik.handleBlur("Time")}
             fullWidth
             required
           >
@@ -186,11 +238,18 @@ const QuoteForm = ({ handleClose }) => {
             ))}
           </TextField>
           <TextField
-            label="How Did You Find Us? "
+            id="FindUs"
+            label="How Did You Find Us?"
             select
-            defaultValue="Google"
+            defaultValue=""
             variant="outlined"
             margin="normal"
+            value={formik.values.FindUs}
+            onChange={formik.handleChange("FindUs")}
+            error={formik.touched.FindUs && Boolean(formik.errors.FindUs)}
+            helperText={formik.touched.FindUs && formik.errors.FindUs}
+            onBlur={formik.handleBlur("FindUs")}
+            required
             fullWidth
           >
             {referrals.map((option) => (

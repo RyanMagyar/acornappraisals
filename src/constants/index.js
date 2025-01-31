@@ -354,6 +354,10 @@ export const referrals = [
     value: "Referral",
     label: "Referral",
   },
+  {
+    value: "Other",
+    label: "Other",
+  },
 ];
 export const timeSpans = [
   {
