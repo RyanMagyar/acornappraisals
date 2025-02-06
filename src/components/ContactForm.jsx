@@ -16,18 +16,6 @@ const validationSchema = yup.object({
     .min(15, "Phone number is not valid add +1 for US numbers")
     .max(15, "Phone number is not valid add +1 for US numbers")
     .trim(),
-  Address: yup.string().required("Street Address is required"),
-  City: yup.string().required("City is required"),
-  ZipCode: yup
-    .string()
-    .required("Zip Code is required")
-    .min(5, "Must be exactly 5 digits")
-    .max(5, "Must be exactly 5 Digits")
-    .matches(/^[0-9]+$/, "Must be only digits"),
-  Type: yup.string().required("Appraisal Type is required"),
-  Size: yup.string().required("Property Size is required"),
-  Time: yup.string().required("Appraisal Time Needed is required"),
-  FindUs: yup.string().required("How did you find us is required"),
 });
 
 const ContactForm = ({ handleClose }) => {
@@ -36,13 +24,6 @@ const ContactForm = ({ handleClose }) => {
       Name: "",
       Email: "",
       Phone: "+1",
-      Address: "",
-      City: "",
-      ZipCode: "",
-      Type: "",
-      Size: "",
-      Time: "",
-      FindUs: "",
     },
     onSubmit: (values) => {
       console.log(JSON.stringify(values));
@@ -103,6 +84,15 @@ const ContactForm = ({ handleClose }) => {
             required
           />
           <div className="hidden lg:block w-1/2 "></div>
+        </div>
+        <p className="pt-5 mx-auto">Message</p>
+        <div className="flex flex-grow lg:gap-5 pt-5 pb-5">
+          <TextField
+            className="mx-auto flex-grow md:flex-none md:w-3/4 lg:w-1/2"
+            multiline
+            rows={4}
+            maxRows={5}
+          />
         </div>
         <div className="flex gap-5 justify-center">
           <Button
