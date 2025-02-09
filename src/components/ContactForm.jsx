@@ -24,6 +24,7 @@ const ContactForm = ({ handleClose }) => {
       Name: "",
       Email: "",
       Phone: "+1",
+      Message: "",
     },
     onSubmit: (values) => {
       console.log(JSON.stringify(values));
@@ -89,10 +90,13 @@ const ContactForm = ({ handleClose }) => {
         <p className="pt-5 mx-auto">Message</p>
         <div className="flex flex-grow lg:gap-5 pt-5 pb-5">
           <TextField
+            id="Message"
+            label="Message"
+            value={formik.values.Message}
+            onChange={formik.handleChange("Message")}
             className="mx-auto flex-grow md:flex-none md:w-3/4 lg:w-1/2"
             multiline
             rows={4}
-            maxRows={5}
           />
         </div>
         <div className="flex gap-5 justify-center">
