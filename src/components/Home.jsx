@@ -10,8 +10,14 @@ const Home = () => {
   const handleOpen = (contact) => {
     setContact(contact);
     setOpen(true);
+    if (typeof window != "undefined" && window.document) {
+      document.body.style.overflow = "hidden";
+    }
   };
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setOpen(false);
+    document.body.style.overflow = "unset";
+  };
 
   return (
     <Section
