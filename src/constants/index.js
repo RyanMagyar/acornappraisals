@@ -64,6 +64,7 @@ export const services = [
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: serviceIcon3,
     imageUrl: benefitImage1,
+    QuoteType: "Prelisting",
   },
   {
     id: "1",
@@ -73,6 +74,7 @@ export const services = [
     iconUrl: serviceIcon4,
     imageUrl: benefitImage2,
     light: true,
+    QuoteType: "Estate",
   },
   {
     id: "2",
@@ -81,6 +83,7 @@ export const services = [
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: serviceIcon1,
     imageUrl: benefitImage3,
+    QuoteType: "Financial",
   },
   {
     id: "3",
@@ -90,6 +93,7 @@ export const services = [
     iconUrl: serviceIcon5,
     imageUrl: benefitImage4,
     light: true,
+    QuoteType: "Assessor",
   },
   {
     id: "4",
@@ -98,6 +102,7 @@ export const services = [
     backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: serviceIcon2,
     imageUrl: benefitImage5,
+    QuoteType: "Divorce",
   },
   {
     id: "5",
@@ -106,6 +111,7 @@ export const services = [
     backgroundUrl: "./src/assets/benefits/card-6.svg",
     iconUrl: serviceIcon6,
     imageUrl: benefitImage5,
+    QuoteType: "Other",
   },
 ];
 
@@ -217,11 +223,11 @@ export const appraisalTypes = [
     label: "Prelisting",
   },
   {
-    value: "Estate Tax/Date of Death",
+    value: "Estate",
     label: "Estate Tax/Date of Death",
   },
   {
-    value: "Real Estate Assessor",
+    value: "Assessor",
     label: "Real Estate Assessor",
   },
   {
@@ -229,7 +235,7 @@ export const appraisalTypes = [
     label: "Divorce",
   },
   {
-    value: "Financial Planning/Trusts",
+    value: "Financial",
     label: "Financial Planning/Trusts",
   },
   {

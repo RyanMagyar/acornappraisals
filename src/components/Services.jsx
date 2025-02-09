@@ -9,7 +9,11 @@ import ModalDialog from "./ModalDialog";
 
 const Services = () => {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
+  const [QuoteType, setQuoteType] = useState("");
+  const handleOpen = (QuoteType) => {
+    setQuoteType(QuoteType);
+    setOpen(true);
+  };
   const handleClose = () => setOpen(false);
 
   return (
@@ -32,7 +36,7 @@ const Services = () => {
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.0rem] pointer-events-none">
                 <h5 className="h5 mb-5">{item.title}</h5>
                 <p className="body-2 grow text-n-3">{item.text}</p>
-                <div className="flex items-center mt-auto" onClick={handleOpen}>
+                <div className="flex items-center mt-auto">
                   <img
                     src={item.iconUrl}
                     width={48}
@@ -41,7 +45,7 @@ const Services = () => {
                   />
                   <div
                     className="flex items-center ml-auto pointer-events-auto cursor-pointer"
-                    onClick={handleOpen}
+                    onClick={() => handleOpen(item.QuoteType)}
                   >
                     <p className="ml-auto font-code text-xs font-bold text-n-3 uppercase tracking-wider">
                       Get a Quote
@@ -74,7 +78,12 @@ const Services = () => {
             </div>
           ))}
         </div>
-        <ModalDialog open={open} isContact={false} handleClose={handleClose} />
+        <ModalDialog
+          open={open}
+          isContact={false}
+          QuoteType={QuoteType}
+          handleClose={handleClose}
+        />
       </div>
     </Section>
   );

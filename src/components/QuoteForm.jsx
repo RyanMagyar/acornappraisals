@@ -37,7 +37,7 @@ const validationSchema = yup.object({
   FindUs: yup.string().required("How did you find us is required"),
 });
 
-const QuoteForm = ({ handleClose }) => {
+const QuoteForm = ({ QuoteType, handleClose }) => {
   const formik = useFormik({
     initialValues: {
       Name: "",
@@ -46,7 +46,7 @@ const QuoteForm = ({ handleClose }) => {
       Address: "",
       City: "",
       ZipCode: "",
-      Type: "",
+      Type: QuoteType ? QuoteType : "",
       Size: "",
       Time: "",
       FindUs: "",

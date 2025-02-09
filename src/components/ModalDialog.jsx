@@ -2,7 +2,7 @@ import { Dialog } from "@mui/material";
 import QuoteForm from "./QuoteForm";
 import ContactForm from "./ContactForm";
 
-const ModalDialog = ({ open, isContact, handleClose }) => {
+const ModalDialog = ({ open, isContact, QuoteType, handleClose }) => {
   return (
     <Dialog
       open={open}
@@ -14,7 +14,7 @@ const ModalDialog = ({ open, isContact, handleClose }) => {
       {isContact ? (
         <ContactForm handleClose={handleClose} />
       ) : (
-        <QuoteForm handleClose={handleClose} />
+        <QuoteForm QuoteType={QuoteType} handleClose={handleClose} />
       )}
     </Dialog>
   );
