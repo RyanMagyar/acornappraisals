@@ -4,8 +4,14 @@ import Heading from "./Heading";
 import Arrow from "../assets/svg/Arrow";
 import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
+import { useState } from "react";
+import ModalDialog from "./ModalDialog";
 
 const Services = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <Section crosses id="services">
       <div className="container relative z-2">
@@ -26,17 +32,22 @@ const Services = () => {
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.0rem] pointer-events-none">
                 <h5 className="h5 mb-5">{item.title}</h5>
                 <p className="body-2 grow text-n-3">{item.text}</p>
-                <div className="flex items-center mt-auto">
+                <div className="flex items-center mt-auto" onClick={handleOpen}>
                   <img
                     src={item.iconUrl}
                     width={48}
                     height={48}
                     alt={item.title}
                   />
-                  <p className="ml-auto font-code text-xs font-bold text-n-2 uppercase tracking-wider">
-                    Explore more
-                  </p>
-                  <Arrow />
+                  <div
+                    className="flex items-center ml-auto pointer-events-auto cursor-pointer"
+                    onClick={handleOpen}
+                  >
+                    <p className="ml-auto font-code text-xs font-bold text-n-3 uppercase tracking-wider">
+                      Get a Quote
+                    </p>
+                    <Arrow />
+                  </div>
                 </div>
               </div>
 
@@ -63,6 +74,7 @@ const Services = () => {
             </div>
           ))}
         </div>
+        <ModalDialog open={open} isContact={false} handleClose={handleClose} />
       </div>
     </Section>
   );

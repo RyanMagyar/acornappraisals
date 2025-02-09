@@ -79,6 +79,7 @@ const QuoteForm = ({ handleClose }) => {
             error={formik.touched.Name && Boolean(formik.errors.Name)}
             helperText={formik.touched.Name && formik.errors.Name}
             onBlur={formik.handleBlur}
+            required
           />
           <TextField
             id="Email"
