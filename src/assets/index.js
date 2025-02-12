@@ -21,6 +21,9 @@ import chromecast from "./chrome-cast.svg";
 import sliders04 from "./sliders-04.svg";
 import loading from "./loading.png";
 import background from "./background.jpg";
+import acorn1 from "./nut-icon.svg";
+import acorn2 from "./nut-icon2.svg";
+import acorn3 from "./nut-icon3.svg";
 
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
@@ -88,6 +91,9 @@ import twitter from "./socials/twitter.svg";
 
 export {
   acorn,
+  acorn1,
+  acorn2,
+  acorn3,
   brainwave,
   check,
   check2,

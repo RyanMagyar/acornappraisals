@@ -10,6 +10,9 @@ import About from "./components/About";
 const App = () => {
   const rootElement = document.getElementById("root");
   const theme = createTheme({
+    typography: {
+      fontFamily: ['"Sora", sans-serif'].join(","),
+    },
     palette: {
       primary: {
         main: "#FF6978",
