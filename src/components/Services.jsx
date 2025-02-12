@@ -30,10 +30,10 @@ const Services = () => {
           title="Appraisal Services"
         />
 
-        <div className="flex flex-wrap gap-10 mb-10">
+        <div className="flex items-center justify-center flex-wrap gap-10 mb-10">
           {services.map((item) => (
             <div
-              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
+              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] max-w-[24rem]"
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
               }}

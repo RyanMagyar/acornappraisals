@@ -38,7 +38,7 @@ const Header = () => {
     >
       <div className="flex items-center px-5 lg:px-7.7 xl:px-10 max-lg:py-4">
         <a className="block w-[16rem] xl:mr-8" href="#home">
-          <img src={acorn} width={375} height={91} alt="Acorn" />
+          <img src={acorn} width={375} height={91} alt="AcornLogo" />
         </a>
 
         <nav
@@ -54,10 +54,10 @@ const Header = () => {
                 onClick={handleClick}
                 className={`block relative font-code text-2xl uppercase text-n-1 transistion-colors hover:text-color-1 ${
                   item.onlyMobile ? "lg:hidden" : ""
-                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:front-semibold ${
+                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-[14px] lg:front-semibold ${
                   item.url === pathname.hash
-                    ? "z-2 lg:text-n-1"
-                    : "lg:text-n-1/50"
+                    ? "z-2 lg:text-color-5"
+                    : "lg:text-color-5/50"
                 } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
               >
                 {item.title}
@@ -69,11 +69,11 @@ const Header = () => {
         </nav>
         <a
           href="#signup"
-          className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
+          className="button hidden mr-8 text-color-5/50 transition-colors hover:text-color-5 lg:block"
         >
           Contact Us
         </a>
-        <Button className="hidden lg:flex" href="#login">
+        <Button className="hidden lg:flex hover:text-n-1/50" href="#login">
           Get a Quote
         </Button>
 

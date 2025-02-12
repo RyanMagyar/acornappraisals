@@ -8,7 +8,7 @@ const About = () => {
       <Section
         crosses
         id="about"
-        className="bg-color-1"
+        className="bg-color-3"
         style={{
           backgroundImage: `url(${aboutBackground})`,
         }}
