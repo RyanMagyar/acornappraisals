@@ -24,6 +24,9 @@ import background from "./background.jpg";
 import acorn1 from "./nut-icon.svg";
 import acorn2 from "./nut-icon2.svg";
 import acorn3 from "./nut-icon3.svg";
+import phone from "./phone.png";
+import email from "./email.png";
+import pin from "./pin.png";
 
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
@@ -94,6 +97,9 @@ export {
   acorn1,
   acorn2,
   acorn3,
+  phone,
+  email,
+  pin,
   brainwave,
   check,
   check2,
