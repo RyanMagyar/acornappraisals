@@ -12,7 +12,7 @@ const App = () => {
   const theme = createTheme({
     palette: {
       primary: {
-        main: "#b25cb1",
+        main: "#FF6978",
       },
     },
     components: {

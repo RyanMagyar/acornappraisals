@@ -23,10 +23,10 @@ const Services = () => {
   };
 
   return (
-    <Section crosses id="services">
+    <Section crosses id="services" className="bg-color-1">
       <div className="container relative z-2">
         <Heading
-          className="md:max-w-md lg:max-w-2xl text-center"
+          className="md:max-w-md lg:max-w-2xl text-center text-color-5"
           title="Appraisal Services"
         />
 
@@ -64,7 +64,7 @@ const Services = () => {
               {item.light && <GradientLight />}
 
               <div
-                className="absolute inset-0.5 bg-n-4"
+                className="absolute inset-0.5 bg-color-5"
                 style={{ clipPath: "url(#benefits)" }}
               >
                 <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">

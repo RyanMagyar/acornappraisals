@@ -13,11 +13,11 @@ export default {
     extend: {
       colors: {
         color: {
-          1: "#AC6AFF",
-          2: "#FFC876",
-          3: "#FF776F",
-          4: "#7ADB78",
-          5: "#858DFF",
+          1: "#FFFCF9",
+          2: "#FF6978",
+          3: "#B1EDE8",
+          4: "#6D435A",
+          5: "#340068",
           6: "#FF98E2",
         },
         stroke: {

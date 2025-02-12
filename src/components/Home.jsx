@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <Section
-      className="pt-[12rem] -mt-[5.25rem]"
+      className="pt-[12rem] -mt-[5.25rem] bg-color-5"
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
       id="home"
@@ -31,8 +31,8 @@ const Home = () => {
     >
       <div className="container relative">
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[0.5rem]">
-          <h1 className="h1 mb-6 text-n-1">Acorn Appraisal Services</h1>
-          <h2 className="h2 mb-6 text-n-2">
+          <h1 className="h1 mb-6 text-color-1">Acorn Appraisal Services</h1>
+          <h2 className="h2 mb-6 text-color-3">
             Serving Southeast Michigan Since 1993
           </h2>
           <div className="mx-auto pt-20">
