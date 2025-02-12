@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import ModalDialog from "./ModalDialog";
 
 //import { brainwave } from "../assets";
 import { acorn } from "../assets";
@@ -12,6 +13,19 @@ import { useState } from "react";
 const Header = () => {
   const pathname = useLocation();
   const [openNavigation, setOpenNavigation] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [isContact, setContact] = useState(false);
+  const handleOpen = (contact) => {
+    setContact(contact);
+    setOpen(true);
+    if (typeof window != "undefined" && window.document) {
+      document.body.style.overflow = "hidden";
+    }
+  };
+  const handleClose = () => {
+    setOpen(false);
+    document.body.style.overflow = "unset";
+  };
 
   const toggleNavigation = () => {
     if (openNavigation) {
@@ -68,12 +82,15 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
         <a
-          href="#signup"
-          className="button hidden mr-8 text-color-5/50 transition-colors hover:text-color-5 lg:block"
+          onClick={() => handleOpen(true)}
+          className="button hidden mr-8 text-color-5/50 transition-colors hover:text-color-5 lg:block cursor-pointer"
         >
           Contact Us
         </a>
-        <Button className="hidden lg:flex hover:text-n-1/50" href="#login">
+        <Button
+          className="hidden lg:flex hover:text-n-1/50"
+          onClick={() => handleOpen(false)}
+        >
           Get a Quote
         </Button>
 
@@ -84,6 +101,11 @@ const Header = () => {
         >
           <MenuSvg openNavigation={openNavigation} />
         </Button>
+        <ModalDialog
+          open={open}
+          isContact={isContact}
+          handleClose={handleClose}
+        />
       </div>
     </div>
   );

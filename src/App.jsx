@@ -17,6 +17,9 @@ const App = () => {
       primary: {
         main: "#FF6978",
       },
+      secondary: {
+        main: "#340068",
+      },
     },
     components: {
       MuiDialog: {

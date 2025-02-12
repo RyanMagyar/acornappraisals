@@ -3,7 +3,7 @@ import Heading from "./Heading";
 import { serviceMap } from "../assets/";
 const Map = () => {
   return (
-    <Section crosses id="map" className="bg-color-5">
+    <Section crosses id="map" className="bg-color-5" dark>
       <div>
         <Heading
           className="md:max-w-md lg:max-w-2xl text-center text-color-1"

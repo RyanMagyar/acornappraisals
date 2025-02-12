@@ -54,7 +54,7 @@ const Services = () => {
                       className="flex items-center ml-auto pointer-events-auto cursor-pointer"
                       onClick={() => handleOpen(item.QuoteType)}
                     >
-                      <p className="ml-auto font-code text-xs font-bold text-color-2 uppercase tracking-wider">
+                      <p className="ml-auto text-xs font-bold text-color-2 uppercase tracking-wider">
                         Get a Quote
                       </p>
                       <Arrow />

@@ -65,7 +65,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
         className="flex flex-col p-10"
         onSubmit={formik.handleSubmit}
       >
-        <h1 className="h2 mb-5 text-n-1 mx-auto">Get a Quote</h1>
+        <h1 className="h2 mb-5 text-color-5 mx-auto">Get a Quote</h1>
         <p className="pt-5">Personal Information</p>
         <div className="lg:flex lg:gap-5">
           <TextField
@@ -262,15 +262,20 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
         </div>
         <div className="flex gap-5 justify-center">
           <Button
+            type="submit"
+            size="large"
+            color="secondary"
+            variant="contained"
+          >
+            Submit
+          </Button>
+          <Button
             onClick={handleClose}
             size="large"
             color="error"
             variant="contained"
           >
             Cancel
-          </Button>
-          <Button type="submit" size="large" variant="contained">
-            Submit
           </Button>
         </div>
       </form>
