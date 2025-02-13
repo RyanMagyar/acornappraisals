@@ -16,6 +16,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const [isContact, setContact] = useState(false);
   const handleOpen = (contact) => {
+    enablePageScroll();
     setContact(contact);
     setOpen(true);
     if (typeof window != "undefined" && window.document) {
@@ -24,6 +25,7 @@ const Header = () => {
   };
   const handleClose = () => {
     setOpen(false);
+    toggleNavigation();
     document.body.style.overflow = "unset";
   };
 
