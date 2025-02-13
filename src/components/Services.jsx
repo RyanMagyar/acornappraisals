@@ -78,7 +78,7 @@ const Services = () => {
               }}
               key={item.id}
             >
-              <div className="drop-shadow-[0_3px_8px_rgba(52,0,104)] hover:drop-shadow-[0_8px_30px_rgba(52,0,104)] transition-all duration-300 ease-in-out ">
+              <div className="drop-shadow-[0_3px_8px_rgba(52,0,104)] md:hover:drop-shadow-[0_8px_30px_rgba(52,0,104)] transition-all duration-300 ease-in-out ">
                 <div className="relative group">
                   <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.0rem] pointer-events-none">
                     <h5 className="h5 text-color-5 mb-5">{item.title}</h5>
@@ -94,6 +94,7 @@ const Services = () => {
                         id="Quote Line"
                         className="flex group items-center ml-auto pointer-events-auto cursor-pointer"
                         onClick={() => handleOpen(item.QuoteType)}
+                        onTouchStart={() => handleOpen(item.QuoteType)}
                       >
                         <p className="ml-auto text-xs font-bold text-color-2 uppercase tracking-wider">
                           Get a Quote

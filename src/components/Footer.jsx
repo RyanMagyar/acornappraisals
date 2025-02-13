@@ -10,22 +10,37 @@ const Footer = () => {
         </p>
 
         <ul className="flex gap-5 flex-wrap">
-          <p className="flex items-center gap-2">
+          <a
+            href="https://www.google.com/maps?q=9169+Baywood+Dr,+Plymouth,+MI+48170"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 cursor-pointer hover:underline"
+          >
             <img src={pin} alt="Pin Icon" className="w-5 h-5" />
             Plymouth, MI 48170
-          </p>
-          <p className="flex items-center gap-2">
+          </a>
+          <a
+            href="tel:+17344537979"
+            className="flex items-center gap-2 cursor-pointer hover:underline"
+          >
             <img src={phone} alt="Phone Icon" className="w-5 h-5" />
             Office: (734) 453-7979
-          </p>
-          <p className="flex items-center gap-2">
+          </a>
+          <a
+            href="tel:+17347177851"
+            className="flex items-center gap-2 cursor-pointer hover:underline"
+          >
             <img src={phone} alt="Phone Icon" className="w-5 h-5" />
             Cell: (734) 717 7851
-          </p>
-          <p className="flex items-center gap-2">
+          </a>
+
+          <a
+            href="mailto:AcornAppraisal@Outlook.com"
+            className="flex items-center gap-2 cursor-pointer hover:underline"
+          >
             <img src={email} alt="Email Icon" className="w-5 h-5" />
             Email: AcornAppraisal@Outlook.com
-          </p>
+          </a>
         </ul>
       </div>
     </Section>
