@@ -32,12 +32,12 @@ const Map = () => {
               <li className="">Livingston</li>
             </ul>
           </div>
-          <div className="hidden 2xl:block lg:absolute lg:left-20 lg:bottom-0 lg:z-1">
+          <div className="hidden 2xl:block lg:absolute lg:left-10 lg:bottom-0 lg:z-1">
             <Parallax startScroll={1500} endScroll={1850} scale={[0, 1]}>
               <img src={tree2} height={300} width={300} className="" />
             </Parallax>
           </div>
-          <div className="hidden 2xl:block lg:absolute lg:right-20 lg:bottom-0 lg:z-1">
+          <div className="hidden 2xl:block lg:absolute lg:right-10 lg:bottom-0 lg:z-1">
             <Parallax startScroll={1550} endScroll={1850} scale={[0, 1]}>
               <img src={tree2} height={300} width={300} className="" />
             </Parallax>
