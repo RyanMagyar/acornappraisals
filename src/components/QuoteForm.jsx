@@ -261,12 +261,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
           </TextField>
         </div>
         <div className="flex gap-5 justify-center">
-          <Button
-            type="submit"
-            size="large"
-            color="secondary"
-            variant="contained"
-          >
+          <Button type="submit" size="large" variant="contained">
             Submit
           </Button>
           <Button

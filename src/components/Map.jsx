@@ -1,24 +1,18 @@
 import Section from "./Section";
 import Heading from "./Heading";
 import { serviceMap } from "../assets/";
-import { tree } from "../assets";
+import { tree2 } from "../assets";
 import { Parallax } from "react-scroll-parallax";
 const Map = () => {
   return (
-    <Section
-      crosses
-      customPaddings={"xl:pt-32 pb-0"}
-      id="map"
-      className="bg-color-5"
-      dark
-    >
+    <Section crosses id="map" className="bg-color-5" dark>
       <div>
         <Heading
           className="md:max-w-md lg:max-w-2xl text-center text-color-1"
           title="Areas We Service"
         />
         <div className="container lg:flex lg:grow lg:flex-nowrap items-center justify-center">
-          <div className="lg:grow lg:basis-1">
+          <div className="lg:grow lg:basis-1 z-2">
             <img
               src={serviceMap}
               width={750}
@@ -38,9 +32,14 @@ const Map = () => {
               <li className="">Livingston</li>
             </ul>
           </div>
-          <div className="absolute left-5">
-            <Parallax startScroll={1400} endScroll={1700} scale={[0, 1]}>
-              <img src={tree} height={250} width={250} className="left-50" />
+          <div className="hidden 2xl:block lg:absolute lg:left-20 lg:bottom-0 lg:z-1">
+            <Parallax startScroll={1500} endScroll={1850} scale={[0, 1]}>
+              <img src={tree2} height={300} width={300} className="" />
+            </Parallax>
+          </div>
+          <div className="hidden 2xl:block lg:absolute lg:right-20 lg:bottom-0 lg:z-1">
+            <Parallax startScroll={1550} endScroll={1850} scale={[0, 1]}>
+              <img src={tree2} height={300} width={300} className="" />
             </Parallax>
           </div>
         </div>

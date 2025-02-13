@@ -40,6 +40,7 @@ const Home = () => {
             <Button
               variant="contained"
               className={"mr-5"}
+              color="secondary"
               onClick={() => handleOpen(false)}
             >
               Get a Quote
@@ -48,6 +49,7 @@ const Home = () => {
               variant="contained"
               sx={{ width: 132 }}
               className={"ml-5"}
+              color="secondary"
               onClick={() => handleOpen(true)}
             >
               Contact Us

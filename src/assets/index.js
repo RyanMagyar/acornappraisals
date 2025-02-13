@@ -28,6 +28,7 @@ import phone from "./phone.png";
 import email from "./email.png";
 import pin from "./pin.png";
 import tree from "./tree.png";
+import tree2 from "./tree2.png";
 
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
@@ -103,6 +104,7 @@ export {
   email,
   pin,
   tree,
+  tree2,
   brainwave,
   check,
   check2,

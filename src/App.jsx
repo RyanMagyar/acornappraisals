@@ -16,10 +16,10 @@ const App = () => {
     },
     palette: {
       primary: {
-        main: "#FF6978",
+        main: "#340068",
       },
       secondary: {
-        main: "#340068",
+        main: "#FF6978",
       },
     },
     components: {
