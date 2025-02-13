@@ -1,9 +1,17 @@
 import Section from "./Section";
 import Heading from "./Heading";
 import { serviceMap } from "../assets/";
+import { tree } from "../assets";
+import { Parallax } from "react-scroll-parallax";
 const Map = () => {
   return (
-    <Section crosses id="map" className="bg-color-5" dark>
+    <Section
+      crosses
+      customPaddings={"xl:pt-32 pb-0"}
+      id="map"
+      className="bg-color-5"
+      dark
+    >
       <div>
         <Heading
           className="md:max-w-md lg:max-w-2xl text-center text-color-1"
@@ -29,6 +37,11 @@ const Map = () => {
               <li>South Oakland</li>
               <li className="">Livingston</li>
             </ul>
+          </div>
+          <div className="absolute left-5">
+            <Parallax startScroll={1400} endScroll={1700} scale={[0, 1]}>
+              <img src={tree} height={250} width={250} className="left-50" />
+            </Parallax>
           </div>
         </div>
       </div>

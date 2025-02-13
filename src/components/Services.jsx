@@ -4,7 +4,7 @@ import Heading from "./Heading";
 import Arrow from "../assets/svg/Arrow";
 import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ModalDialog from "./ModalDialog";
 import { Parallax } from "react-scroll-parallax";
 import { acorn1, acorn2 } from "../assets";
@@ -12,6 +12,7 @@ import { acorn1, acorn2 } from "../assets";
 const Services = () => {
   const [open, setOpen] = useState(false);
   const [QuoteType, setQuoteType] = useState("");
+  const [translateYRange, setTranslateYRange] = useState(["0px", "500px"]);
   const handleOpen = (QuoteType) => {
     setQuoteType(QuoteType);
     setOpen(true);
@@ -24,12 +25,26 @@ const Services = () => {
     document.body.style.overflow = "unset";
   };
 
+  useEffect(() => {
+    const updateTranslateY = () => {
+      if (window.innerWidth < 768) {
+        setTranslateYRange(["-2350", "6000"]);
+      } else {
+        setTranslateYRange(["-650", "3000"]);
+      }
+    };
+
+    updateTranslateY(); // Set initial value
+    window.addEventListener("resize", updateTranslateY);
+    return () => window.removeEventListener("resize", updateTranslateY);
+  }, []);
+
   return (
     <Section crosses id="services" className="bg-color-1">
       <Parallax
-        translateY={[-650, 3000]}
+        translateY={translateYRange}
         rotate={[0, 720]}
-        className="absolute -top-[800px] md:-top-[550px] lg:-top-[620px] left-20"
+        className="absolute -top-[800px] md:-top-[550px] lg:-top-[620px] left-5 lg:left-20"
       >
         <img
           src={acorn1}
@@ -38,9 +53,9 @@ const Services = () => {
         />
       </Parallax>
       <Parallax
-        translateY={[-650, 3000]}
+        translateY={translateYRange}
         rotate={[120, 840]}
-        className="absolute -top-[800px] md:-top-[550px] lg:-top-[620px] right-20"
+        className="absolute -top-[800px] md:-top-[550px] lg:-top-[620px] right-5 lg:right-20"
       >
         <img
           src={acorn2}
