@@ -62,10 +62,10 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
     <div className="">
       <form
         noValidate
-        className="flex flex-col p-10"
+        className="flex flex-col pl-10 pr-10 pt-5 pb-5"
         onSubmit={formik.handleSubmit}
       >
-        <h1 className="h2 mb-5 text-color-5 mx-auto">Get a Quote</h1>
+        <h1 className="h2 text-color-5 mx-auto">Get a Quote</h1>
         <p className="pt-5">Personal Information</p>
         <div className="lg:flex lg:gap-5">
           <TextField

@@ -25,9 +25,9 @@ const Map = () => {
             </h2>
             <ul className="text-center flex flex-col lg:gap-y-5 text-color-1">
               <li className="">Wayne</li>
-              <li className="">Livingston</li>
               <li>Washtenaw</li>
               <li>South Oakland</li>
+              <li className="">Livingston</li>
             </ul>
           </div>
         </div>

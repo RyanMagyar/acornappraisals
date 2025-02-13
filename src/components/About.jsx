@@ -1,7 +1,7 @@
 import Section from "./Section";
 import Heading from "./Heading";
 import { aboutBackground } from "../assets";
-import { plymouthPic } from "../assets";
+import { tree, plymouthPic } from "../assets";
 const About = () => {
   return (
     <div>
@@ -15,20 +15,20 @@ const About = () => {
       >
         <div>
           <Heading
-            className="md:max-w-md lg:max-w-2xl text-center"
+            className="md:max-w-md lg:max-w-2xl text-color-5 text-center"
             title="About Us"
           />
           <div className="container lg:grow lg:basis-1 lg:flex lg:flex-nowrap items-center justify-center">
             <div className="lg:grow lg:basis-1 lg:mr-10">
               <img
-                src={plymouthPic}
-                width={600}
+                src={tree}
+                width={450}
                 height={300}
-                alt="Service Map"
+                alt="Tree"
                 className="mx-auto"
               />
             </div>
-            <div className="lg:grow lg:basis-1 lg:ml-10 lg:max-w-300">
+            <div className="lg:grow lg:basis-1 lg:ml-10 text-color-5 lg:max-w-300">
               <p>
                 For over 25 years, Acorn Appraisal Services has provided
                 top-rated home appraisals throughout Southeast Michigan.

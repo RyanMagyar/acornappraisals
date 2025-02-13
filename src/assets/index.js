@@ -27,6 +27,7 @@ import acorn3 from "./nut-icon3.svg";
 import phone from "./phone.png";
 import email from "./email.png";
 import pin from "./pin.png";
+import tree from "./tree.png";
 
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
@@ -85,6 +86,7 @@ import benefitImage2 from "./benefits/death-bg.png";
 import benefitImage3 from "./benefits/trust-bg.png";
 import benefitImage4 from "./benefits/tax-bg.png";
 import benefitImage5 from "./benefits/divorce-bg.png";
+import benefitImage6 from "./benefits/other-bg.jpg";
 
 import discordBlack from "./socials/discord.svg";
 import facebook from "./socials/facebook.svg";
@@ -100,6 +102,7 @@ export {
   phone,
   email,
   pin,
+  tree,
   brainwave,
   check,
   check2,
@@ -171,6 +174,7 @@ export {
   benefitImage3,
   benefitImage4,
   benefitImage5,
+  benefitImage6,
   plymouthPic,
   aboutBackground,
   discordBlack,
