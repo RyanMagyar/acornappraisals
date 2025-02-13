@@ -28,7 +28,7 @@ const About = () => {
                 className="mx-auto"
               />
             </div>
-            <div className="lg:grow lg:basis-1 lg:ml-10 text-color-5 lg:max-w-300">
+            <div className="lg:grow lg:basis-1 lg:ml-10 text-color-5 md:text-[20px] lg:max-w-300">
               <p>
                 For over 25 years, Acorn Appraisal Services has provided
                 top-rated home appraisals throughout Southeast Michigan.

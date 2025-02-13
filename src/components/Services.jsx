@@ -6,6 +6,8 @@ import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
 import { useState } from "react";
 import ModalDialog from "./ModalDialog";
+import { Parallax } from "react-scroll-parallax";
+import { acorn1, acorn2 } from "../assets";
 
 const Services = () => {
   const [open, setOpen] = useState(false);
@@ -24,6 +26,28 @@ const Services = () => {
 
   return (
     <Section crosses id="services" className="bg-color-1">
+      <Parallax
+        translateY={[-650, 3000]}
+        rotate={[0, 720]}
+        className="absolute -top-[800px] md:-top-[550px] lg:-top-[620px] left-20"
+      >
+        <img
+          src={acorn1}
+          alt="Falling Acorn"
+          className={`w-16 h-16 transition-transform duration-500`}
+        />
+      </Parallax>
+      <Parallax
+        translateY={[-650, 3000]}
+        rotate={[120, 840]}
+        className="absolute -top-[800px] md:-top-[550px] lg:-top-[620px] right-20"
+      >
+        <img
+          src={acorn2}
+          alt="Falling Acorn"
+          className={`w-16 h-16 transition-transform duration-500`}
+        />
+      </Parallax>
       <div className="container relative z-2">
         <Heading
           className="md:max-w-md lg:max-w-2xl text-center text-color-5"
