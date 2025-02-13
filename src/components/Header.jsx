@@ -64,8 +64,19 @@ const Header = () => {
             {navigation.map((item) => (
               <a
                 key={item.id}
-                href={item.url}
-                onClick={handleClick}
+                href={item.onlyMobile ? "#" : item.url}
+                onClick={(event) => {
+                  var contact = false;
+                  if (item.url == "contact") {
+                    contact = true;
+                  }
+                  if (item.onlyMobile) {
+                    event.preventDefault();
+                    handleOpen(contact);
+                  } else {
+                    handleClick();
+                  }
+                }}
                 className={`block relative font-code text-2xl uppercase text-color-5 transistion-colors hover:text-color-7 ${
                   item.onlyMobile ? "lg:hidden" : ""
                 } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-[14px] lg:front-semibold ${

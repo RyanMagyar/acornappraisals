@@ -40,13 +40,13 @@ export const navigation = [
   {
     id: "4",
     title: "Contact Us",
-    url: "#signup",
+    url: "contact",
     onlyMobile: true,
   },
   {
     id: "5",
     title: "Get A Quote",
-    url: "#login",
+    url: "",
     onlyMobile: true,
   },
 ];
