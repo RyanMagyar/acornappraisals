@@ -29,7 +29,7 @@ const ContactForm = ({ handleClose }) => {
     onSubmit: (values) => {
       console.log(JSON.stringify(values));
 
-      fetch("/_forms.html"),
+      fetch("/"),
         {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
