@@ -36,6 +36,11 @@ const validationSchema = yup.object({
   Time: yup.string().required("Appraisal Time Needed is required"),
   FindUs: yup.string().required("How did you find us is required"),
 });
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
 const QuoteForm = ({ QuoteType, handleClose }) => {
   const formik = useFormik({
@@ -52,7 +57,13 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
       FindUs: "",
     },
     onSubmit: (values) => {
+      values["form-name"] = "quote";
       console.log(JSON.stringify(values));
+      fetch("/_forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ ...values }),
+      });
       handleClose();
     },
     validationSchema: validationSchema,
@@ -64,17 +75,17 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
         noValidate
         className="flex flex-col pl-10 pr-10 pt-5 pb-5"
         onSubmit={formik.handleSubmit}
-        name="Quote"
+        name="quote"
         method="POST"
-        data-netlify="true"
       >
         <h1 className="h2 text-color-5 mx-auto">Get a Quote</h1>
         <p className="pt-5">Personal Information</p>
         <div className="lg:flex lg:gap-5">
-          <input type="hidden" name="form-name" value="Quote" />
+          <input type="hidden" name="form-name" value="quote" />
           <TextField
             id="Name"
             label="Name"
+            name="Name"
             variant="outlined"
             margin="normal"
             fullWidth
@@ -88,6 +99,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
           <TextField
             id="Email"
             label="Email"
+            name="Email"
             variant="outlined"
             type="email"
             margin="normal"
@@ -104,6 +116,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
           <MuiTelInput
             id="Phone"
             label="Phone Number"
+            name="Phone"
             variant="outlined"
             value={formik.values.Phone}
             onChange={formik.handleChange("Phone")}
@@ -121,6 +134,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
           <TextField
             id="Address"
             label="Street Address"
+            name="Address"
             variant="outlined"
             margin="normal"
             value={formik.values.Address}
@@ -134,6 +148,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
           <TextField
             id="City"
             label="City"
+            name="City"
             variant="outlined"
             margin="normal"
             value={formik.values.City}
@@ -148,6 +163,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
         <div className="lg:flex lg:gap-5">
           <TextField
             label="State"
+            name="State"
             select
             defaultValue="Michigan"
             variant="outlined"
@@ -164,6 +180,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
           <TextField
             id="ZipCode"
             label="Zip Code"
+            name="Zip Code"
             variant="outlined"
             margin="normal"
             value={formik.values.ZipCode}
@@ -180,6 +197,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
           <TextField
             id="Type"
             label="Appraisal Type"
+            name="Appraisal Type"
             select
             defaultValue=""
             variant="outlined"
@@ -201,6 +219,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
           <TextField
             id="Size"
             label="Property Size"
+            name="Property Size"
             select
             defaultValue=""
             variant="outlined"
@@ -222,8 +241,9 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
         </div>
         <div className="lg:flex lg:gap-5">
           <TextField
-            id="Time"
+            id="Time Needed"
             label="Appraisal Needed Time"
+            name="Time Needed"
             select
             defaultValue=""
             variant="outlined"
@@ -245,6 +265,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
           <TextField
             id="FindUs"
             label="How Did You Find Us?"
+            name="Find Us"
             select
             defaultValue=""
             variant="outlined"
