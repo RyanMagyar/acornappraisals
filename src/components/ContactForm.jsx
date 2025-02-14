@@ -40,14 +40,17 @@ const ContactForm = ({ handleClose }) => {
         className="flex flex-col p-10"
         onSubmit={formik.handleSubmit}
         name="contact"
+        method="POST"
         data-netlify="true"
       >
         <h1 className="h2 mb-5 text-color-5 mx-auto">Contact Us</h1>
         <p className="pt-5">Personal Information</p>
         <div className="lg:flex lg:gap-5">
+          <input type="hidden" name="form-name" value="contact" />
           <TextField
             id="Name"
             label="Name"
+            name="Name"
             variant="outlined"
             margin="normal"
             fullWidth
@@ -61,6 +64,7 @@ const ContactForm = ({ handleClose }) => {
           <TextField
             id="Email"
             label="Email"
+            name="Email"
             variant="outlined"
             type="email"
             margin="normal"
@@ -78,6 +82,7 @@ const ContactForm = ({ handleClose }) => {
             id="Phone"
             label="Phone Number"
             variant="outlined"
+            name="Phone"
             value={formik.values.Phone}
             onChange={formik.handleChange("Phone")}
             error={formik.touched.Phone && Boolean(formik.errors.Phone)}
@@ -94,6 +99,7 @@ const ContactForm = ({ handleClose }) => {
           <TextField
             id="Message"
             label="Message"
+            name="Message"
             value={formik.values.Message}
             onChange={formik.handleChange("Message")}
             className="mx-auto flex-grow md:flex-none md:w-3/4 lg:w-1/2"
