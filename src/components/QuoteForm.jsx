@@ -66,10 +66,12 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
         onSubmit={formik.handleSubmit}
         name="Quote"
         method="POST"
+        data-netlify="true"
       >
         <h1 className="h2 text-color-5 mx-auto">Get a Quote</h1>
         <p className="pt-5">Personal Information</p>
         <div className="lg:flex lg:gap-5">
+          <input type="hidden" name="form-name" value="Quote" />
           <TextField
             id="Name"
             label="Name"
