@@ -49,6 +49,7 @@ const ContactForm = ({ handleClose }) => {
         onSubmit={formik.handleSubmit}
         name="contact"
         method="POST"
+        data-netlify="true"
       >
         <h1 className="h2 mb-5 text-color-5 mx-auto">Contact Us</h1>
         <p className="pt-5">Personal Information</p>
