@@ -17,6 +17,11 @@ const validationSchema = yup.object({
     .max(15, "Phone number is not valid add +1 for US numbers")
     .trim(),
 });
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
 const ContactForm = ({ handleClose }) => {
   const formik = useFormik({
@@ -31,8 +36,8 @@ const ContactForm = ({ handleClose }) => {
       console.log(JSON.stringify(values));
       fetch("/_forms.html", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ ...values }),
       });
 
       handleClose();
