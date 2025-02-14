@@ -27,9 +27,9 @@ const ContactForm = ({ handleClose }) => {
       Message: "",
     },
     onSubmit: (values) => {
+      values["form-name"] = "contact";
       console.log(JSON.stringify(values));
-
-      fetch("/_forms.html", {
+      fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: JSON.stringify(values),
