@@ -29,12 +29,11 @@ const ContactForm = ({ handleClose }) => {
     onSubmit: (values) => {
       console.log(JSON.stringify(values));
 
-      fetch("/"),
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: JSON.stringify(values),
-        };
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: JSON.stringify(values),
+      });
 
       handleClose();
     },
