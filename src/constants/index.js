@@ -5,21 +5,19 @@ import {
   serviceIcon4,
   serviceIcon5,
   serviceIcon6,
+  benefitCard1,
+  benefitCard2,
+  benefitCard3,
+  benefitCard4,
+  benefitCard5,
+  benefitCard6,
   benefitImage1,
   benefitImage2,
   benefitImage3,
   benefitImage4,
   benefitImage5,
   benefitImage6,
-  file02,
-  homeSmile,
-  notification2,
-  notification3,
-  notification4,
-  plusSquare,
-  searchMd,
-  yourlogo,
-} from "../assets";
+} from "../app/public";
 
 export const navigation = [
   {
@@ -51,18 +49,12 @@ export const navigation = [
   },
 ];
 
-export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
-
-export const notificationImages = [notification4, notification3, notification2];
-
-export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
-
 export const services = [
   {
     id: "0",
     title: "Prelisting Appraisals",
     text: "Get a competitive edge with a professional pre-listing appraisal. Our accurate, reliable valuations ensure your home is priced right from the start, helping you sell faster and for the best price.",
-    backgroundUrl: "./src/assets/benefits/card-1.svg",
+    backgroundUrl: benefitCard1,
     iconUrl: serviceIcon3,
     imageUrl: benefitImage1,
     QuoteType: "Prelisting",
@@ -71,7 +63,7 @@ export const services = [
     id: "1",
     title: "Appraisal Management Company Services",
     text: "Our state-licensed, experienced team provides comprehensive valuations with precision and professionalism—partner with us for top-quality appraisal services.",
-    backgroundUrl: "./src/assets/benefits/card-3.svg",
+    backgroundUrl: benefitCard3,
     iconUrl: serviceIcon1,
     imageUrl: benefitImage3,
     light: true,
@@ -81,7 +73,7 @@ export const services = [
     id: "2",
     title: "Estate Tax or Date of Death Appraisals",
     text: "Receive accurate current or retrospective valuations for assets in the event of an inheritance or death. Our reliable valuations provide the essential documentation needed for tax filings and estate planning.",
-    backgroundUrl: "./src/assets/benefits/card-2.svg",
+    backgroundUrl: benefitCard2,
     iconUrl: serviceIcon4,
     imageUrl: benefitImage2,
     QuoteType: "Estate",
@@ -90,7 +82,7 @@ export const services = [
     id: "3",
     title: "Real Estate Assessor Appeal",
     text: "If you believe your property has been overvalued, a professional independent appraisal can help make your case to lower your property taxes.",
-    backgroundUrl: "./src/assets/benefits/card-4.svg",
+    backgroundUrl: benefitCard4,
     iconUrl: serviceIcon5,
     imageUrl: benefitImage4,
     light: true,
@@ -100,7 +92,7 @@ export const services = [
     id: "4",
     title: "Divorce Appraisals",
     text: "Navigate the complexities of property division with a certified appraisal through Acorn Appraisal Services. Our impartial and accurate valuations provide the clarity needed for fair and equitable settlements",
-    backgroundUrl: "./src/assets/benefits/card-5.svg",
+    backgroundUrl: benefitCard5,
     iconUrl: serviceIcon2,
     imageUrl: benefitImage5,
     QuoteType: "Divorce",
@@ -109,7 +101,7 @@ export const services = [
     id: "5",
     title: "Other Services",
     text: "We also offer other services such as financial planning and trusts appraisals, bankruptcy appraisals, PMI removal appraisals, and more.",
-    backgroundUrl: "./src/assets/benefits/card-6.svg",
+    backgroundUrl: benefitCard6,
     iconUrl: serviceIcon6,
     imageUrl: benefitImage6,
     QuoteType: "",

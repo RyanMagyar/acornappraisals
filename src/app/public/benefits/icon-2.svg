@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+	<title>icon-2</title>
+	<defs>
+		<image width="64" height="64" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADT0lEQVR4nO2aSWgUQRSGv0nc4xKDuOBFY8SIHtR4EAOKCCoYjSKCSxDccvAieHEhKghCFDwKShQR1yiiEoK7NxWXxCWK69kVNEbFaOJEHtRAGEhV90xXzfTQHzwYhu7+/1fdXa+WhoiIiAh3TAZqgNoeokYdk5OsA/4CXYaQY9aSY2wG4h6ST4Qcu5UcYZ+PxJNDzg0169NIPhGhfh1uBtAA1wkx5wJogLOEmKlAexrJy7lTCDnLgX8pJC+VoIocYBzQlEIDNKlzQ8si4FqKdz8Rcu5VoIIQUQJcCaDzS47bwESymBiwPc1Oz0unuE1pZRV9gRMWE0+OeqA/WUIhcM9h8om4AwzJdPJ9gFs+jf9RPXwDUKdCfjd7nC12jxtA70wlHwOO+6jpF4GVhrsmT9Mq4JKP2eOxTPUJ1R4NynygLIXrT/fxdG3EMSOBrwZTnQHN6aWhOwxarcAoHFJvMPQDmB+g3gJ1TZ3mKRwxyfB+yuit0oLuEg+jSifriYcMJnZY1K4xaB/EMoXAT42BZ0C+RX259nON/i+gyKI+VYY7sBD7LDZ4kFJrjTqN8FPc0aLxcdim8FuN8G7csUfj45XN979LE7L85Yoyg5fBNkQnGAY9Nju/ZHopzZ78yJpE4JRrBN/jng8aPzNd977NuOexxo94DZwKjeBr3PPGdTmerRFswz26ucEsG4Ilhp5XqoQrigxeim2I5hsWPGUDxBUrND7abVak+xrhk7jjtMaHrE9ao1Yj/B0YipvHv03jY69N8XLDu7cf+xwweJhhUzwGvNOI/wbGWNQvNvRDTsrxFsMdkEFRgQVdueYTg7Z8i2SdAuCLwch5IC9ATenVLxg0PwIDcMQmg5kutUEaxM7NIOCyB70NOCTPUBIT8QKYloaO7A289KBzN+AnzvPIsNWDubhasvYzRR0PnPG4O/QNGEuGqDTMy5PjEbATmAOUAgNVlKr/dvn8mqQjGz6eqPb5FWhQEXf93utYk8LObjrRmU3JJ5gHfHaQ/CdgLlnKaKDRYvINrjdBU2WpKoFBJd5ia5nLJlKXl6kBkZ9K0b2Hb1SN6bzGB80Ita12FHiops7JCct/D4AjwGpgODlOP2CYCvkdEREREREREYFL/gOQ1JIE5LX4/wAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		.s0 { fill: #76e0ff } 
+	</style>
+	<path fill-rule="evenodd" class="s0" d="m12 0h24c6.6 0 12 5.4 12 12v24c0 6.6-5.4 12-12 12h-24c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12z"/>
+	<use id="ring" href="#img1" transform="matrix(.555,0,0,.555,6,6)"/>
+</svg>

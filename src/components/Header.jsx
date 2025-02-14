@@ -1,17 +1,21 @@
-import { useLocation } from "react-router-dom";
+//import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import ModalDialog from "./ModalDialog";
+import Image from "next/image";
 
 //import { brainwave } from "../assets";
-import { acorn } from "../assets";
+//import { acorn } from "../assets";
+import acornLogo from "../app/public/AcornLogo.svg";
 import { navigation } from "../constants";
 import Button from "./Button";
-import MenuSvg from "../assets/svg/MenuSvg";
+import MenuSvg from "../app/public/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
 
 const Header = () => {
-  const pathname = useLocation();
+  //const pathname = useLocation();
+  const pathname = usePathname();
   const [openNavigation, setOpenNavigation] = useState(false);
   const [open, setOpen] = useState(false);
   const [isContact, setContact] = useState(false);
@@ -54,7 +58,7 @@ const Header = () => {
     >
       <div className="flex items-center px-5 lg:px-7.7 xl:px-10 max-lg:py-4">
         <a className="block w-[16rem] xl:mr-8" href="#home">
-          <img src={acorn} width={375} height={91} alt="AcornLogo" />
+          <Image src={acornLogo.src} width={375} height={91} alt="AcornLogo" />
         </a>
 
         <nav

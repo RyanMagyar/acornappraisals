@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+	<title>icon-1</title>
+	<defs>
+		<image  width="28" height="33" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAhCAMAAAD9NzvVAAAAAXNSR0IB2cksfwAAADZQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAt3ZocgAAABJ0Uk5TXMX5/8Qzm8bMAFWqjuPyfZllQ7qTDQAAAHpJREFUeJztk8sOhCAMRe9FVHSh//+hviaM2pqwspioq0nmJk0JhwbOAoIkrGxOiDORpqCz5zSeRZahPGAlxQVhle5m1Jv0z3tY6+YEr+tvRKOHlgQvH/Qc/pZKkIoR7XHnCO+lz3+VmyoJmioJmipn2A1Zz5V9/pdxB6I7YiarMGIyAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		.s0 { fill: #ffc876 } 
+	</style>
+	<path fill-rule="evenodd" class="s0" d="m12 0h24c6.6 0 12 5.4 12 12v24c0 6.6-5.4 12-12 12h-24c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12z"/>
+	<use id="Background" href="#img1" x="10" y="8"/>
+</svg>

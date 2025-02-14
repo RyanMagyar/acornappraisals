@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 366" width="384" height="366">
+	<title>card-1</title>
+	<defs>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,366,-384.099,0,192,0)">
+			<stop offset="0" stop-color="#33ceff" stop-opacity="1"/>
+			<stop offset=".563" stop-color="#d633ff" stop-opacity="0"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { opacity: .1;fill: none;stroke: #ffffff;stroke-width: 2 } 
+		.s1 { opacity: .9;fill: none;stroke: url(#g1);stroke-width: 2 } 
+	</style>
+	<path class="s0" d="m32 1h287.5c8.5 0 16.7 3.6 22.6 9.8l32.5 34.9c5.4 5.7 8.4 13.3 8.4 21.1v267.2c0 17.1-13.9 31-31 31h-320c-17.1 0-31-13.9-31-31v-302c0-17.1 13.9-31 31-31z"/>
+	<path class="s1" d="m32 1h287.5c8.5 0 16.7 3.6 22.6 9.8l32.5 34.9c5.4 5.7 8.4 13.3 8.4 21.1v267.2c0 17.1-13.9 31-31 31h-320c-17.1 0-31-13.9-31-31v-302c0-17.1 13.9-31 31-31z"/>
+</svg>

@@ -1,7 +1,8 @@
-import { background } from "../../assets";
-import { acorn1 } from "../../assets";
-import { acorn2 } from "../../assets";
-import { acorn3 } from "../../assets";
+import { background } from "../../app/public";
+import { acorn1 } from "../../app/public";
+import { acorn2 } from "../../app/public";
+import { acorn3 } from "../../app/public";
+import Image from "next/image";
 
 export const Rings = () => {
   return (
@@ -24,12 +25,21 @@ export const SideLines = () => {
 export const BackgroundCircles = () => {
   return (
     <>
-      <img src={acorn1} className="absolute top-[4.4rem] left-16 w-4 h-4" />
-      <img
+      <Image
+        src={acorn1}
+        alt="Acorn"
+        className="absolute top-[4.4rem] left-16 w-4 h-4"
+      />
+      <Image
         src={acorn2}
         className="absolute top-[12.6rem] right-16 w-4 h-4 scale-x-[-1]"
+        alt="Acorn"
       />
-      <img src={acorn3} className="absolute top-[26.8rem] left-12 w-6 h-6" />
+      <Image
+        src={acorn3}
+        alt="acorn"
+        className="absolute top-[26.8rem] left-12 w-6 h-6"
+      />
     </>
   );
 };
@@ -38,7 +48,7 @@ export const HamburgerMenu = () => {
   return (
     <div className="absolute inset-0 pointer-events-none lg:hidden">
       <div className="absolute inset-0 opacity-[.06]">
-        <img
+        <Image
           className="w-full h-full object-cover"
           src={background}
           width={688}

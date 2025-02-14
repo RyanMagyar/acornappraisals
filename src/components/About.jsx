@@ -1,7 +1,8 @@
 import Section from "./Section";
 import Heading from "./Heading";
-import { aboutBackground } from "../assets";
-import { tree, plymouthPic } from "../assets";
+import aboutBackground from "../app/public/about-bg.png";
+import { tree, plymouthPic } from "../app/public";
+import Image from "next/image";
 const About = () => {
   return (
     <div>
@@ -10,7 +11,7 @@ const About = () => {
         id="about"
         className="bg-color-3"
         style={{
-          backgroundImage: `url(${aboutBackground})`,
+          backgroundImage: `url(${aboutBackground.src})`,
         }}
       >
         <div>
@@ -20,11 +21,11 @@ const About = () => {
           />
           <div className="container lg:grow lg:basis-1 lg:flex lg:flex-nowrap items-center justify-center">
             <div className="lg:grow lg:basis-1 lg:mr-10">
-              <img
+              <Image
                 src={tree}
                 width={450}
-                height={300}
                 alt="Tree"
+                style={{ height: "auto" }}
                 className="mx-auto"
               />
             </div>

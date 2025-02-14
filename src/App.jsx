@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import ButtonGradient from "./assets/svg/ButtonGradient";
+import ButtonGradient from "./app/public/svg/ButtonGradient";
 import Home from "./components/Home";
 import Services from "./components/Services";
 import Map from "./components/Map";

@@ -1,5 +1,6 @@
-import { phone, email, pin } from "../assets";
+import { phone, email, pin } from "../app/public";
 import Section from "./Section";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -16,21 +17,21 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-2 cursor-pointer hover:underline"
           >
-            <img src={pin} alt="Pin Icon" className="w-5 h-5" />
+            <Image src={pin} alt="Pin Icon" className="w-5 h-5" />
             Plymouth, MI 48170
           </a>
           <a
             href="tel:+17344537979"
             className="flex items-center gap-2 cursor-pointer hover:underline"
           >
-            <img src={phone} alt="Phone Icon" className="w-5 h-5" />
+            <Image src={phone} alt="Phone Icon" className="w-5 h-5" />
             Office: (734) 453-7979
           </a>
           <a
             href="tel:+17347177851"
             className="flex items-center gap-2 cursor-pointer hover:underline"
           >
-            <img src={phone} alt="Phone Icon" className="w-5 h-5" />
+            <Image src={phone} alt="Phone Icon" className="w-5 h-5" />
             Cell: (734) 717 7851
           </a>
 
@@ -38,7 +39,7 @@ const Footer = () => {
             href="mailto:AcornAppraisal@Outlook.com"
             className="flex items-center gap-2 cursor-pointer hover:underline"
           >
-            <img src={email} alt="Email Icon" className="w-5 h-5" />
+            <Image src={email} alt="Email Icon" className="w-5 h-5" />
             Email: AcornAppraisal@Outlook.com
           </a>
         </ul>

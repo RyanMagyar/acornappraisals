@@ -1,9 +1,8 @@
 import { Button } from "@mui/material";
 import Section from "./Section";
-import { homeBackground } from "../assets";
+import homeBackground from "../app/public/home-background.jpg";
 import { useState } from "react";
 import ModalDialog from "./ModalDialog";
-
 const Home = () => {
   const [open, setOpen] = useState(false);
   const [isContact, setContact] = useState(false);
@@ -26,7 +25,7 @@ const Home = () => {
       crossesOffset="lg:translate-y-[5.25rem]"
       id="home"
       style={{
-        backgroundImage: `url(${homeBackground})`,
+        backgroundImage: `url(${homeBackground.src})`,
       }}
       dark
     >
