@@ -16,6 +16,7 @@ const validationSchema = yup.object({
     .min(15, "Phone number is not valid add +1 for US numbers")
     .max(15, "Phone number is not valid add +1 for US numbers")
     .trim(),
+  Message: yup.string().required("Please include a message").max(500),
 });
 const encode = (data) => {
   return Object.keys(data)
@@ -112,6 +113,9 @@ const ContactForm = ({ handleClose }) => {
             label="Message"
             name="Message"
             value={formik.values.Message}
+            error={formik.touched.Message && Boolean(formik.errors.Message)}
+            helperText={formik.touched.Message && formik.errors.Message}
+            onBlur={formik.handleBlur("Message")}
             onChange={formik.handleChange("Message")}
             className="mx-auto flex-grow md:flex-none md:w-3/4 lg:w-1/2"
             multiline
