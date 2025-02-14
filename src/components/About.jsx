@@ -1,7 +1,7 @@
 import Section from "./Section";
 import Heading from "./Heading";
 import aboutBackground from "../app/public/about-bg.png";
-import { tree, plymouthPic } from "../app/public";
+import { tree } from "../app/public";
 import Image from "next/image";
 const About = () => {
   return (
