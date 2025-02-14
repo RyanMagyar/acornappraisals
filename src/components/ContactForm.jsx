@@ -28,6 +28,14 @@ const ContactForm = ({ handleClose }) => {
     },
     onSubmit: (values) => {
       console.log(JSON.stringify(values));
+
+      fetch("/_forms.html"),
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: JSON.stringify(values),
+        };
+
       handleClose();
     },
     validationSchema: validationSchema,

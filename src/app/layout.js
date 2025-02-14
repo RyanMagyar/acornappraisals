@@ -12,12 +12,6 @@ export default function RootLayout({ children }) {
       <body>
         <div id="root">{children}</div>
       </body>
-      <form name="contact" data-netlify="true" hidden>
-        <input type="text" name="Name" />
-        <input type="email" name="Email" />
-        <input type="tel" name="Phone" />
-        <textarea name="Message"></textarea>
-      </form>
     </html>
   );
 }
