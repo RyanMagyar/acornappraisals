@@ -35,7 +35,12 @@ const Map = () => {
             </ul>
           </div>
           <div className="hidden 2xl:block lg:absolute lg:left-10 lg:bottom-0 lg:z-1">
-            <Parallax startScroll={1600} endScroll={1850} scale={[0, 1]}>
+            <Parallax
+              startScroll={1700}
+              endScroll={1850}
+              translateY={["150px", "0px"]}
+              scale={[0, 1]}
+            >
               <div className="relative h-[300px] w-[300px] bottom-0">
                 <Image
                   src={tree2}
@@ -48,7 +53,12 @@ const Map = () => {
             </Parallax>
           </div>
           <div className="hidden 2xl:block lg:absolute lg:right-10 lg:bottom-0 lg:z-1">
-            <Parallax startScroll={1600} endScroll={1850} scale={[0, 1]}>
+            <Parallax
+              startScroll={1700}
+              endScroll={1850}
+              translateY={["150px", "0px"]}
+              scale={[0, 1]}
+            >
               <div className="relative h-[300px] w-[300px] bottom-0">
                 <Image
                   src={tree2}
