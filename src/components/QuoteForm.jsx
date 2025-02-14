@@ -50,6 +50,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
       Phone: "+1",
       Address: "",
       City: "",
+      State: "Michigan",
       ZipCode: "",
       Type: QuoteType ? QuoteType : "",
       Size: "",
@@ -180,7 +181,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
           <TextField
             id="ZipCode"
             label="Zip Code"
-            name="Zip Code"
+            name="ZipCode"
             variant="outlined"
             margin="normal"
             value={formik.values.ZipCode}
@@ -197,7 +198,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
           <TextField
             id="Type"
             label="Appraisal Type"
-            name="Appraisal Type"
+            name="Type"
             select
             defaultValue=""
             variant="outlined"
@@ -219,7 +220,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
           <TextField
             id="Size"
             label="Property Size"
-            name="Property Size"
+            name="Size"
             select
             defaultValue=""
             variant="outlined"
@@ -243,7 +244,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
           <TextField
             id="Time Needed"
             label="Appraisal Needed Time"
-            name="Time Needed"
+            name="Time"
             select
             defaultValue=""
             variant="outlined"
@@ -265,7 +266,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
           <TextField
             id="FindUs"
             label="How Did You Find Us?"
-            name="Find Us"
+            name="FindUs"
             select
             defaultValue=""
             variant="outlined"
