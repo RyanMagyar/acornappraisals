@@ -101,14 +101,14 @@ const Header = () => {
         <a
           onClick={() => handleOpen(true)}
           className="button hidden mr-8 text-color-5 transition-colors hover:text-color-5/50 lg:block cursor-pointer"
-          aria-label="Contact Us Form Link"
+          aria-label="Contact Us Form"
           role="button"
         >
           Contact Us
         </a>
         <Button
           className="hidden lg:flex hover:text-n-1/50"
-          aria-label="Get Quote Button"
+          aria-label="Get Quote Form"
           onClick={() => handleOpen(false)}
         >
           Get a Quote

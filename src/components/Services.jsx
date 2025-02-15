@@ -28,10 +28,10 @@ const Services = () => {
 
   useEffect(() => {
     const updateTranslateY = () => {
-      if (window.innerWidth < 768) {
-        setTranslateYRange(["-2350", "6000"]);
+      if (window.innerWidth < 901) {
+        setTranslateYRange(["0", "6000"]);
       } else {
-        setTranslateYRange(["-650", "3000"]);
+        setTranslateYRange(["0", "3000"]);
       }
     };
 
@@ -45,7 +45,8 @@ const Services = () => {
       <Parallax
         translateY={translateYRange}
         rotate={[0, 720]}
-        className="absolute -top-[800px] md:-top-[550px] lg:-top-[620px] left-5 lg:left-20"
+        shouldAlwaysCompleteAnimation={true}
+        className="absolute -top-[100px] left-5 lg:left-20"
       >
         <Image
           src={acorn1}
@@ -56,7 +57,8 @@ const Services = () => {
       <Parallax
         translateY={translateYRange}
         rotate={[120, 840]}
-        className="absolute -top-[800px] md:-top-[550px] lg:-top-[620px] right-5 lg:right-20"
+        shouldAlwaysCompleteAnimation={true}
+        className="absolute -top-[100px] right-5 lg:right-20"
       >
         <Image
           src={acorn2}
