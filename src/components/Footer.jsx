@@ -6,11 +6,11 @@ const Footer = () => {
   return (
     <Section crosses className="!px-0 !py-10 bg-color-1">
       <div className="container flex sm:justify-between justify-center items-center gap-10 max-sm:flex-col">
-        <p className="caption text-n-4 lg:block">
+        <p className="caption text-n-5 lg:block">
           © {new Date().getFullYear()}. All rights reserved.
         </p>
 
-        <ul className="flex gap-5 flex-wrap">
+        <div className="flex gap-5 flex-wrap">
           <a
             href="https://www.google.com/maps?q=9169+Baywood+Dr,+Plymouth,+MI+48170"
             target="_blank"
@@ -42,7 +42,7 @@ const Footer = () => {
             <Image src={email} alt="Email Icon" className="w-5 h-5" />
             Email: AcornAppraisal@Outlook.com
           </a>
-        </ul>
+        </div>
       </div>
     </Section>
   );

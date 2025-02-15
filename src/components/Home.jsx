@@ -37,6 +37,7 @@ const Home = () => {
           </h2>
           <div className="mx-auto pt-20">
             <Button
+              aria-label="Get Quote Button"
               variant="contained"
               className={"mr-5"}
               color="secondary"
@@ -46,6 +47,7 @@ const Home = () => {
             </Button>
             <Button
               variant="contained"
+              aria-label="Contact Us Button"
               sx={{ width: 132 }}
               className={"ml-5"}
               color="secondary"

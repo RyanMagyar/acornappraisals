@@ -86,7 +86,7 @@ const Services = () => {
               <div className="drop-shadow-[0_3px_8px_rgba(52,0,104)] md:hover:drop-shadow-[0_8px_30px_rgba(52,0,104)] transition-all duration-300 ease-in-out ">
                 <div className="relative group">
                   <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.0rem] pointer-events-none">
-                    <h5 className="h5 text-color-5 mb-5">{item.title}</h5>
+                    <h3 className="h5 text-color-5 mb-5">{item.title}</h3>
                     <p className="body-2 grow text-color-5">{item.text}</p>
                     <div className="flex items-center mt-auto">
                       <Image

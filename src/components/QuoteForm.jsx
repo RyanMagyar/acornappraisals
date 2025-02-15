@@ -59,7 +59,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
     },
     onSubmit: (values) => {
       values["form-name"] = "quote";
-      console.log(JSON.stringify(values));
+      //console.log(JSON.stringify(values));
       fetch("/_forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -287,7 +287,12 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
           </TextField>
         </div>
         <div className="flex gap-5 justify-center">
-          <Button type="submit" size="large" variant="contained">
+          <Button
+            aria-label="Submit"
+            type="submit"
+            size="large"
+            variant="contained"
+          >
             Submit
           </Button>
           <Button
@@ -295,6 +300,7 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
             size="large"
             color="error"
             variant="contained"
+            aria-label="Cancel"
           >
             Cancel
           </Button>

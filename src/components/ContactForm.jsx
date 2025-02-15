@@ -34,7 +34,7 @@ const ContactForm = ({ handleClose }) => {
     },
     onSubmit: (values) => {
       values["form-name"] = "contact";
-      console.log(JSON.stringify(values));
+      //console.log(JSON.stringify(values));
       fetch("/_forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -123,11 +123,17 @@ const ContactForm = ({ handleClose }) => {
           />
         </div>
         <div className="flex gap-5 justify-center">
-          <Button type="submit" size="large" variant="contained">
+          <Button
+            aria-label="Submit"
+            type="submit"
+            size="large"
+            variant="contained"
+          >
             Submit
           </Button>
           <Button
             onClick={handleClose}
+            aria-label="Cancel"
             size="large"
             color="error"
             variant="contained"

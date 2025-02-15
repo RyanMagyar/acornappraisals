@@ -100,12 +100,15 @@ const Header = () => {
         </nav>
         <a
           onClick={() => handleOpen(true)}
-          className="button hidden mr-8 text-color-5/50 transition-colors hover:text-color-5 lg:block cursor-pointer"
+          className="button hidden mr-8 text-color-5 transition-colors hover:text-color-5/50 lg:block cursor-pointer"
+          aria-label="Contact Us Form Link"
+          role="button"
         >
           Contact Us
         </a>
         <Button
           className="hidden lg:flex hover:text-n-1/50"
+          aria-label="Get Quote Button"
           onClick={() => handleOpen(false)}
         >
           Get a Quote
@@ -114,6 +117,7 @@ const Header = () => {
         <Button
           className="ml-auto lg:hidden"
           px="px-3"
+          aria-label="Navigation toggle"
           onClick={toggleNavigation}
         >
           <MenuSvg openNavigation={openNavigation} />

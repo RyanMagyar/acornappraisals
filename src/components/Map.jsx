@@ -17,8 +17,9 @@ const Map = () => {
           <div className="lg:grow lg:basis-1 z-2">
             <Image
               src={serviceMap}
-              width={750}
-              height={750}
+              width={640}
+              height={316}
+              style={{ width: "auto", height: "auto" }}
               alt="Service Map"
               className=""
             />
