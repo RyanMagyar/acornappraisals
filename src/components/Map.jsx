@@ -37,8 +37,8 @@ const Map = () => {
           </div>
           <div className="hidden 2xl:block lg:absolute lg:left-10 lg:bottom-0 lg:z-1">
             <Parallax
-              startScroll={1700}
-              endScroll={1850}
+              startScroll={1600}
+              endScroll={1900}
               translateY={["150px", "0px"]}
               scale={[0, 1]}
             >
@@ -55,8 +55,8 @@ const Map = () => {
           </div>
           <div className="hidden 2xl:block lg:absolute lg:right-10 lg:bottom-0 lg:z-1">
             <Parallax
-              startScroll={1700}
-              endScroll={1850}
+              startScroll={1600}
+              endScroll={1900}
               translateY={["150px", "0px"]}
               scale={[0, 1]}
             >
