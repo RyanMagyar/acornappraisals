@@ -61,13 +61,13 @@ export const services = [
   },
   {
     id: "1",
-    title: "Appraisal Management Company Services",
+    title: "AMC and Lender Services",
     text: "Our state-licensed, experienced team provides comprehensive valuations with precision and professionalism—partner with us for top-quality appraisal services.",
     backgroundUrl: benefitCard3,
     iconUrl: serviceIcon1,
     imageUrl: benefitImage3,
     light: true,
-    QuoteType: "Financial",
+    QuoteType: "",
   },
   {
     id: "2",
