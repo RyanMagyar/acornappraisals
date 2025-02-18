@@ -43,7 +43,7 @@ const About = () => {
               <div>&nbsp;</div>
               <p>
                 Uniform Residential Appraisal Report (URAR) fees typically range
-                from $350-$500 depending on the property.
+                from $350-$550 depending on the property.
               </p>
             </div>
           </div>

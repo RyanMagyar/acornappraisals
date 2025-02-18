@@ -15,7 +15,7 @@ const phoneRegExp =
 
 const validationSchema = yup.object({
   Name: yup.string().required("Name is required"),
-  Email: yup.string().email().required("Email is required"),
+  Email: yup.string().email(),
   Phone: yup
     .string()
     .matches(phoneRegExp, "Phone number is not valid add +1 for US numbers")
@@ -23,18 +23,17 @@ const validationSchema = yup.object({
     .min(15, "Phone number is not valid add +1 for US numbers")
     .max(15, "Phone number is not valid add +1 for US numbers")
     .trim(),
-  Address: yup.string().required("Street Address is required"),
-  City: yup.string().required("City is required"),
+  Address: yup.string(),
+  City: yup.string(),
   ZipCode: yup
     .string()
-    .required("Zip Code is required")
     .min(5, "Must be exactly 5 digits")
     .max(5, "Must be exactly 5 Digits")
     .matches(/^[0-9]+$/, "Must be only digits"),
-  Type: yup.string().required("Appraisal Type is required"),
-  Size: yup.string().required("Property Size is required"),
-  Time: yup.string().required("Appraisal Time Needed is required"),
-  FindUs: yup.string().required("How did you find us is required"),
+  Type: yup.string(),
+  Size: yup.string(),
+  Time: yup.string(),
+  FindUs: yup.string(),
 });
 const encode = (data) => {
   return Object.keys(data)
@@ -79,7 +78,11 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
         name="quote"
         method="POST"
       >
-        <h1 className="h2 text-color-5 mx-auto">Get a Quote</h1>
+        <h1 className="h2 text-color-5 mx-auto">Get a Free Quote</h1>
+        <p className="pt-5 mx-auto">
+          Uniform Residential Appraisal Report (URAR) fees typically range from
+          $350-$550 depending on the property.
+        </p>
         <p className="pt-5">Personal Information</p>
         <div className="lg:flex lg:gap-5">
           <input type="hidden" name="form-name" value="quote" />
@@ -110,7 +113,6 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
             helperText={formik.touched.Email && formik.errors.Email}
             onBlur={formik.handleBlur}
             fullWidth
-            required
           />
         </div>
         <div className="lg:flex flex-grow lg:gap-5">
@@ -144,7 +146,6 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
             error={formik.touched.Address && Boolean(formik.errors.Address)}
             helperText={formik.touched.Address && formik.errors.Address}
             onBlur={formik.handleBlur}
-            required
           />
           <TextField
             id="City"
@@ -158,7 +159,6 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
             onBlur={formik.handleBlur}
             onChange={formik.handleChange}
             fullWidth
-            required
           />
         </div>
         <div className="lg:flex lg:gap-5">
@@ -170,7 +170,6 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
             variant="outlined"
             margin="normal"
             fullWidth
-            required
           >
             {states.map((option) => (
               <MenuItem key={option.value} value={option.value}>
@@ -190,7 +189,6 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
             helperText={formik.touched.ZipCode && formik.errors.ZipCode}
             onBlur={formik.handleBlur}
             fullWidth
-            required
           />
         </div>
         <p className="pt-5">Additional Information</p>
@@ -209,7 +207,6 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
             helperText={formik.touched.Type && formik.errors.Type}
             onBlur={formik.handleBlur("Type")}
             fullWidth
-            required
           >
             {appraisalTypes.map((option) => (
               <MenuItem key={option.value} value={option.value}>
@@ -231,7 +228,6 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
             helperText={formik.touched.Size && formik.errors.Size}
             onBlur={formik.handleBlur("Size")}
             fullWidth
-            required
           >
             {propertySize.map((option) => (
               <MenuItem key={option.value} value={option.value}>
@@ -255,7 +251,6 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
             helperText={formik.touched.Time && formik.errors.Time}
             onBlur={formik.handleBlur("Time")}
             fullWidth
-            required
           >
             {timeSpans.map((option) => (
               <MenuItem key={option.value} value={option.value}>
@@ -276,7 +271,6 @@ const QuoteForm = ({ QuoteType, handleClose }) => {
             error={formik.touched.FindUs && Boolean(formik.errors.FindUs)}
             helperText={formik.touched.FindUs && formik.errors.FindUs}
             onBlur={formik.handleBlur("FindUs")}
-            required
             fullWidth
           >
             {referrals.map((option) => (

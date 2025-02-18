@@ -36,7 +36,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="mailto:AcornAppraisal@Outlook.com"
+            href="mailto:acornappraisal@outlook.com"
             className="flex items-center gap-2 cursor-pointer hover:underline"
           >
             <Image src={email} alt="Email Icon" className="w-5 h-5" />

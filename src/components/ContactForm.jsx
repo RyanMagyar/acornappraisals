@@ -8,7 +8,7 @@ const phoneRegExp =
 
 const validationSchema = yup.object({
   Name: yup.string().required("Name is required"),
-  Email: yup.string().email().required("Email is required"),
+  Email: yup.string().email(),
   Phone: yup
     .string()
     .matches(phoneRegExp, "Phone number is not valid add +1 for US numbers")
@@ -16,7 +16,7 @@ const validationSchema = yup.object({
     .min(15, "Phone number is not valid add +1 for US numbers")
     .max(15, "Phone number is not valid add +1 for US numbers")
     .trim(),
-  Message: yup.string().required("Please include a message").max(500),
+  Message: yup.string().max(500),
 });
 const encode = (data) => {
   return Object.keys(data)
@@ -86,7 +86,6 @@ const ContactForm = ({ handleClose }) => {
             helperText={formik.touched.Email && formik.errors.Email}
             onBlur={formik.handleBlur}
             fullWidth
-            required
           />
         </div>
         <div className="lg:flex flex-grow lg:gap-5">
