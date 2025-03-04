@@ -8,6 +8,7 @@ import email from "./email.png";
 import pin from "./pin.png";
 import tree from "./tree.png";
 import tree2 from "./tree2.png";
+import joycePhoto from "./joycePhoto.png";
 
 import homeBackground from "./home-background.jpg";
 import serviceMap from "./service-map.png";
@@ -43,6 +44,7 @@ export {
   pin,
   tree,
   tree2,
+  joycePhoto,
   background,
   homeBackground,
   serviceMap,

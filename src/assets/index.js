@@ -29,6 +29,7 @@ import email from "./email.png";
 import pin from "./pin.png";
 import tree from "./tree.png";
 import tree2 from "./tree2.png";
+import joycePhoto from "./joycePhoto.png";
 
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
@@ -178,6 +179,7 @@ export {
   benefitImage5,
   benefitImage6,
   plymouthPic,
+  joycePhoto,
   aboutBackground,
   discordBlack,
   facebook,

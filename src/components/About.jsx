@@ -1,7 +1,7 @@
 import Section from "./Section";
 import Heading from "./Heading";
 import aboutBackground from "../app/public/about-bg.png";
-import { tree } from "../app/public";
+import { joycePhoto, tree } from "../app/public";
 import Image from "next/image";
 const About = () => {
   return (
@@ -30,6 +30,14 @@ const About = () => {
               />
             </div>
             <div className="lg:grow lg:basis-1 lg:ml-10 text-color-5 md:text-[20px] lg:max-w-300">
+              <Image
+                src={joycePhoto}
+                width={200}
+                alt="Joyce Photo"
+                style={{ height: "auto" }}
+                className="mx-auto rounded-[50%] mb-10"
+              />
+
               <p>
                 For over 25 years, Acorn Appraisal Services has provided
                 top-rated home appraisals throughout Southeast Michigan.
