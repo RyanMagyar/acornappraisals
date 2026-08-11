@@ -21,18 +21,11 @@ const Footer = () => {
             Plymouth, MI 48170
           </a>
           <a
-            href="tel:+17344537979"
-            className="flex items-center gap-2 cursor-pointer hover:underline"
-          >
-            <Image src={phone} alt="Phone Icon" className="w-5 h-5" />
-            Office: (734) 453-7979
-          </a>
-          <a
             href="tel:+17347177851"
             className="flex items-center gap-2 cursor-pointer hover:underline"
           >
             <Image src={phone} alt="Phone Icon" className="w-5 h-5" />
-            Cell: (734) 717 7851
+            Cell: (734) 717-7851
           </a>
 
           <a
