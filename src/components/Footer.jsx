@@ -25,7 +25,7 @@ const Footer = () => {
             className="flex items-center gap-2 cursor-pointer hover:underline"
           >
             <Image src={phone} alt="Phone Icon" className="w-5 h-5" />
-            Cell: (734) 717-7851
+            Phone: (734) 717-7851
           </a>
 
           <a
